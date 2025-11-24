@@ -1,4 +1,4 @@
-# Elta Website
+# Digital Leisure Website
 
 A modern TypeScript website project built with Vite.
 
