@@ -565,7 +565,7 @@ class App {
   private switchTab(tabName: string): void {
     this.state.activeTab = tabName;
     this.state.currentPage = 'roadmap'; // Reset to roadmap when switching tabs
-    this.header.updateActiveTab(tabName);
+  this.header.updateActiveTab(tabName);
     this.render(document.querySelector<HTMLDivElement>('#app')!);
   }
 

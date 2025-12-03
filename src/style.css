@@ -239,19 +239,142 @@ h4{
   }
 }
 
-  /* Road map */
-  .roadmap-container { padding:1rem 0; }
-  .roadmap-title { font-size:2rem; font-weight:700; margin-bottom:1rem; }
-  .roadmap-timeline { position:relative; min-height:1900px; margin:2rem 0 4rem; padding-bottom:3rem; overflow:hidden; }
-  .timeline-line { position:absolute; left:50%; top:0; bottom:0; width:3px; transform:translateX(-50%); background-image:linear-gradient(to bottom, rgba(0,0,0,0.14) 50%, rgba(0,0,0,0.04) 50%); background-size:3px 18px; z-index:1; }
-  .roadmap-step { position:absolute; width:100%; z-index:2; }
-  .roadmap-item { width:45%; position:relative; }
-  .roadmap-item.roadmap-left { float:left; text-align:right; padding-right:2rem; }
-  .roadmap-item.roadmap-right { float:right; text-align:left; padding-left:2rem; }
-  .roadmap-marker { width:24px; height:24px; border-radius:50%; border:3px solid rgba(0,0,0,0.12); position:absolute; left:50%; transform:translateX(-50%); top:60px; z-index:3; box-shadow:0 2px 6px rgba(0,0,0,0.08); }
-  .marker-red{ background:#a34e11; } .marker-blue{ background:#666; } .marker-green{ background:#333; } .marker-purple{ background:#555; } .marker-pink{ background:#777; } .marker-orange{ background:#888 }
+ /* Road map */
+.roadmap-container {
+  padding: 1rem 0;
+}
 
-  .roadmap-building { margin-top:1rem; clear:both; position:relative; }
+.roadmap-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+/* vertical path with dots = map vibe */
+.roadmap-timeline {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+  margin: 2.5rem 0 4rem;
+  padding: 0 0 1rem;
+}
+
+/* central “route” line */
+.roadmap-timeline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 3px;
+  transform: translateX(-50%);
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.18) 50%,
+    rgba(0, 0, 0, 0.02) 50%
+  );
+  background-size: 3px 16px;
+  opacity: 0.4;
+}
+
+/* each stop on the map */
+.roadmap-step {
+  position: relative;
+  padding: 0.5rem 0;
+}
+
+/* dot marker for each stop */
+.roadmap-step::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--hover-accent);
+  border: 3px solid rgba(0, 0, 0, 0.12);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.18);
+}
+
+/* row = text + building */
+.roadmap-row {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+/* columns */
+.roadmap-item {
+  flex: 1 1 50%;
+}
+
+.roadmap-building {
+  flex: 1 1 50%;
+  text-align: center;
+}
+
+/* buildings stay big but contained */
+.roadmap-building .building-image {
+  width: 100%;
+  max-width: 480px;
+  height: auto;
+}
+
+/* description under each building */
+.roadmap-description {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  text-align: center;
+  max-width: 360px;
+  margin: 0.75rem auto 0;
+}
+
+/* alternate sides so it feels like a path zig-zagging */
+.roadmap-step:nth-child(even) .roadmap-row {
+  flex-direction: row-reverse;
+}
+
+.roadmap-step:nth-child(odd) .roadmap-item {
+  text-align: right;
+}
+
+.roadmap-step:nth-child(even) .roadmap-item {
+  text-align: left;
+}
+
+.roadmap-step:nth-child(odd) .roadmap-building {
+  text-align: left;
+}
+
+.roadmap-step:nth-child(even) .roadmap-building {
+  text-align: right;
+}
+
+/* mobile: collapse into simple stacked list (still cute) */
+@media (max-width: 768px) {
+  .roadmap-timeline::before,
+  .roadmap-step::before {
+    display: none;
+  }
+
+  .roadmap-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .roadmap-item,
+  .roadmap-building {
+    flex: 1 1 100%;
+    text-align: left;
+  }
+
+  .roadmap-building {
+    text-align: center;
+  }
+}
 
   /* Uniform image sizing with sketch desaturation */
 .building-image {
@@ -276,16 +399,17 @@ h4{
   .roadmap-building:hover::after { opacity:0.28; }
 
 .roadmap-description { 
-  font-size:1.45rem;    /* ✅ MUCH BIGGER */
-  color:rgba(0,0,0,0.8); 
-  margin-top:1rem;     /* ✅ more breathing room under image */
-  line-height:1.65; 
+  font-size:0.95rem;   /* ✅ smaller + cleaner */
+  color:rgba(0,0,0,0.75); 
+  margin-top:0.6rem;    
+  line-height:1.45; 
   text-align:center; 
-  width:420px;         /* ✅ wider to match big buildings */
+  width:360px;         
   margin-left:auto; 
   margin-right:auto; 
   font-style:italic; 
 }
+
 
 
   /* (sketch border overlays removed per user request) */
@@ -451,7 +575,13 @@ h4{
   }
 
   @media (max-width:768px) {
-    .roadmap-timeline { min-height:0; padding-bottom:3rem; }
+.roadmap-timeline {
+  position:relative;
+  min-height:3600px;
+  margin:2rem 0 4rem;
+  padding-bottom:3rem;
+  overflow:hidden;
+}
     .roadmap-item { width:100%; float:none; text-align:left; padding:0 1rem 2rem; }
     .roadmap-marker { left:1.5rem; transform:none; }
     .timeline-line { left:1.5rem; transform:none; }
@@ -464,7 +594,6 @@ h4{
     .welcome-title { font-size:1.75rem; }
   }
 
-/* ✅ FORCE full image display with no cropping */
 img {
   width: 100%;
   height: auto;
