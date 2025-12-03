@@ -13,18 +13,23 @@ export class Header {
     return `
       <header class="sticky-header">
         <nav class="header-nav">
-          <button class="nav-tab ${this.activeTab === 'about' ? 'active' : ''}" data-tab="about">
+          <button
+            class="nav-tab ${this.activeTab === 'about' ? 'active' : ''}"
+            data-tab="about"
+          >
             Overview
           </button>
-          <button class="nav-tab ${this.activeTab === 'modern' ? 'active' : ''}" data-tab="modern">
-            Digital-Age Leisure
+          <button
+            class="nav-tab ${this.activeTab === 'roadmap' ? 'active' : ''}"
+            data-tab="roadmap"
+          >
+            Campus Roadmap
           </button>
-          <button class="nav-tab ${this.activeTab === 'traditional' ? 'active' : ''}" data-tab="traditional">
-            Traditional Leisure
-          </button>
-
-           <button class="nav-tab ${this.activeTab === 'posters' ? 'active' : ''}" data-tab="posters">
-            Posters
+          <button
+            class="nav-tab ${this.activeTab === 'concepts' ? 'active' : ''}"
+            data-tab="concepts"
+          >
+            Concepts & Keywords
           </button>
         </nav>
       </header>
@@ -33,20 +38,21 @@ export class Header {
 
   public attachEventListeners(): void {
     const tabs = document.querySelectorAll<HTMLButtonElement>('.nav-tab');
+
     tabs.forEach(tab => {
       tab.addEventListener('click', () => {
         const tabName = tab.getAttribute('data-tab');
-        if (tabName) {
-          this.onTabChange(tabName);
-        }
+        if (!tabName) return;
+
+        this.setActiveTab(tabName);
+        this.onTabChange(tabName);
       });
     });
   }
 
-  public updateActiveTab(tabName: string): void {
+  private setActiveTab(tabName: string): void {
     this.activeTab = tabName;
-    
-    // Update active tab styling
+
     const tabs = document.querySelectorAll<HTMLButtonElement>('.nav-tab');
     tabs.forEach(tab => {
       if (tab.getAttribute('data-tab') === tabName) {
@@ -57,4 +63,3 @@ export class Header {
     });
   }
 }
-

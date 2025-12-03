@@ -9,7 +9,7 @@ export class KeyConcepts {
           </svg>
         </button>
       </div>
-      <h3 class="key-concepts-title">Key Concepts</h3>
+<h3 class="key-concepts-title">Key Concepts for Rethinking Leisure</h3>
       <h4 class="concepts-section-title">Technical</h4>
       <div class="concepts-bubbles">
         <span class="concept-bubble concept-has-definition" data-term="AWS" data-definition="Amazon Web Services – Amazon's on-demand computers and storage that run apps on the internet.">AWS</span>

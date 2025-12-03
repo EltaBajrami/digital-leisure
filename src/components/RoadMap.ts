@@ -9,7 +9,11 @@ export class RoadMap {
   public render(): string {
     return `
       <div class="roadmap-container">
-        <h3 class="roadmap-title">Road Map</h3>
+        <h3 class="roadmap-title">Vassar Leisure Roadmap</h3>
+<p style="margin-bottom: 1.5rem; font-size: 1rem; max-width: 520px;">
+  A campus map that links buildings, digital systems, and the ways you rest, scroll, study, and socialize at Vassar.
+</p>
+
         <div class="roadmap-timeline">
           <!-- Timeline line -->
           <div class="timeline-line"></div>
