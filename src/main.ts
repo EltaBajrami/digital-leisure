@@ -58,26 +58,35 @@ class App {
         style="display: ${this.state.activeTab === 'about' ? 'block' : 'none'}"
       >
         <div class="welcome-section">
-          <p class="welcome-title">Leisure in the Digital Age</p>
+          <p class="welcome-title">Exploring Digital-Age Leisure!</p>
+          <p
+            style="
+              margin-top: 0.2rem;
+              margin-bottom: 1.25rem;
+              font-size: 0.95rem;
+              letter-spacing: 0.04em;
+              text-transform: uppercase;
+              opacity: 0.8;
+            "
+          >
+            <strong> STS-236 </strong> <em> digital lives </em> : a final project by Alexandra, Ella, & Elta
+          </p>
           
           <p style="font-size: 1.05rem; line-height: 1.8; margin-bottom: 0.75rem;">
-            This site is a small field guide for reimagining leisure at Vassar. It takes ideas from
-            <em>Digital Lives</em>—infrastructure, platform capitalism, datafication, algorithmic management,
-            AI, and nonscalability—and drops them into the spaces where you actually spend your time.
+            This site is a small guide for noticing how your free time is shaped by digital systems.
           </p>
           <p style="font-size: 1.05rem; line-height: 1.8; margin-bottom: 1rem;">
-            The campus roadmap connects course concepts to familiar buildings. Each stop asks:
+            Our campus roadmap links these ideas to familiar Vassar buildings. At each stop, you’re invited to ask:
             <span style="font-style: italic;">What does “rest” look like here? Who makes it possible? Whose time,
-            data, or labor is being optimized?</span> The goal is not to reject digital leisure, but to notice how it
-            is structured—and to imagine slower, less efficient, more self-directed forms of pleasure.
+            data, or labor is being organized in the background?</span> The goal isn’t to give up digital leisure,
+            but to see how it’s structured and to imagine slower, more self-directed ways of taking a break.
           </p>
 
           <div style="margin: 1.5rem 0 0.5rem;">
-            <h4 style="margin-bottom: 0.5rem;">How to use this site</h4>
+            <h4 style="margin-bottom: 0.5rem;">WEBSITE FEATURES:</h4>
             <ul style="font-size: 0.98rem; line-height: 1.7; padding-left: 1.2rem; margin-bottom: 0.5rem;">
-              <li><strong>Walk the map:</strong> Click each building to see how digital systems shape leisure there.</li>
-              <li><strong>Switch views:</strong> Use the tabs for the overview, campus roadmap, and concept glossary.</li>
-              <li><strong>Play with concepts:</strong> Explore the keyword bubbles, or add your own terms and definitions.</li>
+              <li><strong>CAMPUS ROADMAP:</strong> Click each building to learn more about relevant themes!</li>
+              <li><strong>CONCEPTS & KEYWORDS:</strong> Study keywords to build your digtal literacy.</li>
             </ul>
           </div>
 
@@ -100,7 +109,7 @@ class App {
                 color: var(--warm-ink);
               "
             >
-              <span>From traditional leisure to platformed rest →</span>
+              <span>How “taking a break” has changed →</span>
               <span
                 id="expand-icon"
                 style="font-size: 1.3rem; transition: transform 0.3s ease;"
@@ -119,17 +128,19 @@ class App {
               "
             >
               <p style="line-height: 1.7; margin-bottom: 0.75rem;">
-                Traditional leisure often meant <strong>active, self-directed participation</strong>:
-                reading, crafts, pickup games, long conversations in third spaces. Stimulation was not
-                constant; satisfaction came from being present, not from endless updates.
+                Before digital platforms, leisure often meant <strong>active, self-chosen participation</strong>:
+                reading, crafts, games, hanging out in common rooms or cafés. There were pauses and pockets
+                of boredom. Time felt slower, and “fun” didn’t always come with notifications.
               </p>
               <p style="line-height: 1.7; margin-bottom: 0.75rem;">
-                Digital-age leisure is increasingly organized by <strong>platforms, algorithms, and metrics</strong>.
-                Rest becomes an endless scroll or auto-generated playlist, optimized for engagement rather than reflection.
+                Now, a lot of rest runs through <strong>platforms, recommendation systems, and metrics</strong>.
+                Breaks turn into scrolling, autoplay, and personalized feeds designed to keep your attention.
+                Your “free time” is also valuable data that can be tracked, sorted, and sold.
               </p>
               <p style="line-height: 1.7;">
-                This website asks what is gained—and what is lost—when your “breaks” are scripted by infrastructures,
-                recommendation systems, and data extraction, and where you can still practice slower, messier forms of rest.
+                This project asks what is gained (and what is lost) when rest is managed by infrastructures and
+                algorithms, and where on campus you can still make time that feels slower, less "efficient",
+                and more your own.
               </p>
             </div>
           </div>
@@ -174,7 +185,7 @@ class App {
       </main>
 
       <footer>
-        <p>&copy; ${new Date().getFullYear()} Digital Literacy Website</p>
+        <p>&copy; ${new Date().getFullYear()} Leisure in the Digital Age · Digital Lives</p>
       </footer>
     `;
 

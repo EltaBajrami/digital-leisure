@@ -10,7 +10,13 @@ export class RoadMap {
   public render(): string {
     return `
       <div class="roadmap-container">
-        <h3 class="roadmap-title">Campus Leisure Map</h3>
+<h2
+  class="roadmap-title"
+  style="font-size: 3rem !important; line-height: 1.1; margin-bottom: 0.6rem;"
+>
+   Campus RoadMap
+</h2>
+
         <p style="max-width: 650px; margin: 0.75rem auto 1.5rem; font-size: 0.98rem; line-height: 1.6;">
           Follow this map through familiar Vassar spaces. Each stop is a prompt to notice how digital systems already
           shape your “down time” here – and to try one small, slower activity in the same place.
@@ -161,7 +167,7 @@ export class RoadMap {
             <div class="roadmap-row">
               <div class="roadmap-item">
                 <h4 class="concepts-section-title">Vogelstein — Creativity & Being Seen</h4>
-                <p style="font-size: 0.95rem; line-height: 1.6;">
+                <p style="font-size: 0.95rem; line-height: 1.6%;">
                   A space for rehearsals, shows, and art-making that sits close to questions of performance, documentation, and sharing.
                 </p>
               </div>
