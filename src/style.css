@@ -225,6 +225,20 @@ h4{
     transform: translateY(0);
   }
 }
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    max-height: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    max-height: 500px;
+    transform: translateY(0);
+  }
+}
+
   /* Road map */
   .roadmap-container { padding:1rem 0; }
   .roadmap-title { font-size:2rem; font-weight:700; margin-bottom:1rem; }

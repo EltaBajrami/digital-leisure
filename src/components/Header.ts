@@ -14,13 +14,17 @@ export class Header {
       <header class="sticky-header">
         <nav class="header-nav">
           <button class="nav-tab ${this.activeTab === 'about' ? 'active' : ''}" data-tab="about">
-            About
+            Overview
           </button>
           <button class="nav-tab ${this.activeTab === 'modern' ? 'active' : ''}" data-tab="modern">
-            Modern Leisure
+            Digital-Age Leisure
           </button>
           <button class="nav-tab ${this.activeTab === 'traditional' ? 'active' : ''}" data-tab="traditional">
             Traditional Leisure
+          </button>
+
+           <button class="nav-tab ${this.activeTab === 'posters' ? 'active' : ''}" data-tab="posters">
+            Posters
           </button>
         </nav>
       </header>
