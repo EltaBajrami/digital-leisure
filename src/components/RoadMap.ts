@@ -13,8 +13,7 @@ export class RoadMap {
         <h3 class="roadmap-title">Campus Leisure Map</h3>
         <p style="max-width: 650px; margin: 0.75rem auto 1.5rem; font-size: 0.98rem; line-height: 1.6;">
           Follow this map through familiar Vassar spaces. Each stop is a prompt to notice how digital systems already
-          shape your “down time” here – and to imagine slower, less optimized forms of leisure in the very same places.
-          Click any building to open a deeper reflection.
+          shape your “down time” here – and to try one small, slower activity in the same place.
         </p>
 
         <div class="roadmap-timeline">
@@ -22,10 +21,10 @@ export class RoadMap {
           <section class="roadmap-step">
             <div class="roadmap-row">
               <div class="roadmap-item">
-                <h4 class="concepts-section-title">Main – Portals & Platforms</h4>
+                <h4 class="concepts-section-title">Main — Platforms & Daily Routines</h4>
                 <p style="font-size: 0.95rem; line-height: 1.6;">
-                  A hub of mail, meetings, and campus logistics. Think about how ID cards, email, and apps quietly
-                  choreograph your movements long before you call any of it “leisure.”
+                  A hub for mail, dining access, and admin tasks where portals, IDs, and schedules quietly set the pace
+                  of your day long before you think about “leisure.”
                 </p>
               </div>
               <div class="roadmap-building">
@@ -46,10 +45,9 @@ export class RoadMap {
           <section class="roadmap-step">
             <div class="roadmap-row">
               <div class="roadmap-item">
-                <h4 class="concepts-section-title">Library – Archives & Algorithms</h4>
+                <h4 class="concepts-section-title">Library — Reading for Pleasure</h4>
                 <p style="font-size: 0.95rem; line-height: 1.6;">
-                  A classic third space that is also saturated with search engines, databases, and recommendation
-                  systems that shape what you read, research – and even how you take breaks.
+                  A space built for focus that also makes room for slow, non-productive reading and quiet time away from feeds.
                 </p>
               </div>
               <div class="roadmap-building">
@@ -60,7 +58,7 @@ export class RoadMap {
                   data-step="2"
                 />
                 <p class="roadmap-description">
-                  Click the library to think about attention, discovery, and rest.
+                  Click the library to think about discovery and attention.
                 </p>
               </div>
             </div>
@@ -70,10 +68,9 @@ export class RoadMap {
           <section class="roadmap-step">
             <div class="roadmap-row">
               <div class="roadmap-item">
-                <h4 class="concepts-section-title">Olmsted – Classrooms & Critical Digital Lives</h4>
+                <h4 class="concepts-section-title">Olmsted — Critique vs Habit</h4>
                 <p style="font-size: 0.95rem; line-height: 1.6;">
-                  Home of lectures, laptops, and this very course. How do ideas about infrastructure, bias, and gig
-                  work travel back out into the ways you actually spend time on campus?
+                  Home of laptops, slides, and class discussions about digital systems that you step back into as soon as class ends.
                 </p>
               </div>
               <div class="roadmap-building">
@@ -84,7 +81,7 @@ export class RoadMap {
                   data-step="3"
                 />
                 <p class="roadmap-description">
-                  Click Olmsted to connect classroom theory to daily rhythms.
+                  Click Olmsted to connect class ideas to daily habits.
                 </p>
               </div>
             </div>
@@ -94,10 +91,9 @@ export class RoadMap {
           <section class="roadmap-step">
             <div class="roadmap-row">
               <div class="roadmap-item">
-                <h4 class="concepts-section-title">Deece – Convenience, Labor & Platform Capitalism</h4>
+                <h4 class="concepts-section-title">Deece — Convenience & Labor</h4>
                 <p style="font-size: 0.95rem; line-height: 1.6;">
-                  Meals feel like downtime, but behind swipe access and buffet ease are invisible schedules, supply
-                  chains, and workers. What does “relaxation” mean in a space built on tightly managed time?
+                  Meals feel easy and social here, but that ease is supported by tightly scheduled, often less visible work.
                 </p>
               </div>
               <div class="roadmap-building">
@@ -108,7 +104,7 @@ export class RoadMap {
                   data-step="4"
                 />
                 <p class="roadmap-description">
-                  Click the Deece to zoom in on convenience and hidden labor.
+                  Click the Deece to look at comfort and invisible labor.
                 </p>
               </div>
             </div>
@@ -118,10 +114,9 @@ export class RoadMap {
           <section class="roadmap-step">
             <div class="roadmap-row">
               <div class="roadmap-item">
-                <h4 class="concepts-section-title">Sunset Lake – Third Spaces & Slowness</h4>
+                <h4 class="concepts-section-title">Sunset Lake — Third Space & Unstructured Time</h4>
                 <p style="font-size: 0.95rem; line-height: 1.6;">
-                  Hammocks, blankets, long conversations: a rare campus space where time can stretch. How do phones and
-                  feeds enter even here – and what might it feel like to be offline together?
+                  A place where time can slow down — walking, sitting, or talking without needing to track or document it.
                 </p>
               </div>
               <div class="roadmap-building">
@@ -132,7 +127,7 @@ export class RoadMap {
                   data-step="5"
                 />
                 <p class="roadmap-description">
-                  Click the lake to think about third spaces and nonscalable life.
+                  Click the lake to think about offline breaks.
                 </p>
               </div>
             </div>
@@ -142,10 +137,9 @@ export class RoadMap {
           <section class="roadmap-step">
             <div class="roadmap-row">
               <div class="roadmap-item">
-                <h4 class="concepts-section-title">AFC – Quantified Bodies & Gamified Rest</h4>
+                <h4 class="concepts-section-title">AFC — Movement & Metrics</h4>
                 <p style="font-size: 0.95rem; line-height: 1.6;">
-                  A building full of metrics, streaks, and leaderboards. When does movement feel like care, and when
-                  does it become another productivity project for fitness platforms and wearables?
+                  A building full of counters, streaks, and goals where exercise can turn into another thing to optimize.
                 </p>
               </div>
               <div class="roadmap-building">
@@ -156,7 +150,7 @@ export class RoadMap {
                   data-step="6"
                 />
                 <p class="roadmap-description">
-                  Click the AFC to explore the pull of quantification.
+                  Click the AFC to explore moving without tracking.
                 </p>
               </div>
             </div>
@@ -166,10 +160,9 @@ export class RoadMap {
           <section class="roadmap-step">
             <div class="roadmap-row">
               <div class="roadmap-item">
-                <h4 class="concepts-section-title">Vogelstein – Aesthetics, Influence & Being Seen</h4>
+                <h4 class="concepts-section-title">Vogelstein — Creativity & Being Seen</h4>
                 <p style="font-size: 0.95rem; line-height: 1.6;">
-                  Performance, images, and experimentation live here – just like on social platforms. What kinds of
-                  expression feel “postable,” and what stays off the grid?
+                  A space for rehearsals, shows, and art-making that sits close to questions of performance, documentation, and sharing.
                 </p>
               </div>
               <div class="roadmap-building">
@@ -180,7 +173,7 @@ export class RoadMap {
                   data-step="7"
                 />
                 <p class="roadmap-description">
-                  Click Vogelstein to sit with visibility, creativity, and leisure.
+                  Click Vogelstein to think about making without posting.
                 </p>
               </div>
             </div>

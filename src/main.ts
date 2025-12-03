@@ -6,7 +6,7 @@ import { KeyConcepts } from './components/KeyConcepts';
 
 interface AppState {
   activeTab: string;   // 'about' | 'roadmap' | 'concepts'
-  currentPage: string; // 'roadmap' or building step number ('1'–'7')
+  currentPage: string; // 'roadmap' or building step number ("1"..."7")
 }
 
 class App {
@@ -19,8 +19,8 @@ class App {
 
   constructor() {
     this.state = {
-      activeTab: 'about',   // start on Overview
-      currentPage: 'roadmap'
+      activeTab: 'about',
+      currentPage: 'roadmap',
     };
 
     this.header = new Header(this.state.activeTab, (tabName) => this.switchTab(tabName));
@@ -44,14 +44,14 @@ class App {
   }
 
   private render(container: HTMLElement): void {
-    // detail view lives under the "Campus Roadmap" tab
+    // building detail only makes sense on the roadmap tab
     const isBuildingDetail =
       this.state.activeTab === 'roadmap' && this.state.currentPage !== 'roadmap';
 
     container.innerHTML = `
       ${this.header.render()}
 
-      <!-- OVERVIEW TAB -->
+      <!-- Overview / Welcome (ABOUT TAB) -->
       <main
         class="content-section"
         id="about-welcome-content"
@@ -75,8 +75,8 @@ class App {
           <div style="margin: 1.5rem 0 0.5rem;">
             <h4 style="margin-bottom: 0.5rem;">How to use this site</h4>
             <ul style="font-size: 0.98rem; line-height: 1.7; padding-left: 1.2rem; margin-bottom: 0.5rem;">
-              <li><strong>Walk the map:</strong> Click each building to see how digital systems are shaping leisure there.</li>
-              <li><strong>Compare modes of rest:</strong> Use the tabs to move between the campus map and key concepts.</li>
+              <li><strong>Walk the map:</strong> Click each building to see how digital systems shape leisure there.</li>
+              <li><strong>Switch views:</strong> Use the tabs for the overview, campus roadmap, and concept glossary.</li>
               <li><strong>Play with concepts:</strong> Explore the keyword bubbles, or add your own terms and definitions.</li>
             </ul>
           </div>
@@ -101,7 +101,10 @@ class App {
               "
             >
               <span>From traditional leisure to platformed rest →</span>
-              <span id="expand-icon" style="font-size: 1.3rem; transition: transform 0.3s ease;">▼</span>
+              <span
+                id="expand-icon"
+                style="font-size: 1.3rem; transition: transform 0.3s ease;"
+              >▼</span>
             </button>
             <div
               id="shift-content"
@@ -116,9 +119,9 @@ class App {
               "
             >
               <p style="line-height: 1.7; margin-bottom: 0.75rem;">
-                Traditional leisure often meant <strong>active, self-directed participation</strong>: reading, crafts,
-                pickup games, long conversations in third spaces. Stimulation was not constant; satisfaction came from
-                mastery, presence, or shared time.
+                Traditional leisure often meant <strong>active, self-directed participation</strong>:
+                reading, crafts, pickup games, long conversations in third spaces. Stimulation was not
+                constant; satisfaction came from being present, not from endless updates.
               </p>
               <p style="line-height: 1.7; margin-bottom: 0.75rem;">
                 Digital-age leisure is increasingly organized by <strong>platforms, algorithms, and metrics</strong>.
@@ -126,35 +129,42 @@ class App {
               </p>
               <p style="line-height: 1.7;">
                 This website asks what is gained—and what is lost—when your “breaks” are scripted by infrastructures,
-                recommendation systems, and data extraction. Where on campus can you still practice slow, messy,
-                unproductive forms of rest?
+                recommendation systems, and data extraction, and where you can still practice slower, messier forms of rest.
               </p>
             </div>
           </div>
         </div>
       </main>
 
-      <!-- CAMPUS ROADMAP TAB: map view -->
+      <!-- Campus Roadmap (ROADMAP TAB: MAP VIEW) -->
       <main
         class="content-section roadmap-main"
         id="about-roadmap-content"
-        style="display: ${this.state.activeTab === 'roadmap' && !isBuildingDetail ? 'block' : 'none'}"
+        style="display: ${
+          this.state.activeTab === 'roadmap' && !isBuildingDetail ? 'block' : 'none'
+        }"
       >
         <div class="roadmap-section">
           ${this.roadMap.render()}
         </div>
       </main>
 
-      <!-- CAMPUS ROADMAP TAB: building detail view -->
+      <!-- Building Detail (ROADMAP TAB: DETAIL VIEW) -->
       <main
         class="content-section building-detail-main"
         id="building-detail-content"
-        style="display: ${isBuildingDetail ? 'block' : 'none'}"
+        style="display: ${
+          this.state.activeTab === 'roadmap' && isBuildingDetail ? 'block' : 'none'
+        }"
       >
-        ${isBuildingDetail ? this.buildingDetail.render(this.state.currentPage) : ''}
+        ${
+          this.state.activeTab === 'roadmap' && isBuildingDetail
+            ? this.buildingDetail.render(this.state.currentPage)
+            : ''
+        }
       </main>
 
-      <!-- CONCEPTS TAB -->
+      <!-- Concepts & Keywords (CONCEPTS TAB) -->
       <main
         class="content-section key-concepts-main"
         id="about-key-concepts-content"
@@ -168,23 +178,25 @@ class App {
       </footer>
     `;
 
-    // Reattach event listeners after render
+    // Reattach header tab listeners
     this.header.attachEventListeners();
 
-    // Only attach roadmap listeners when we're on the map view
+    // Overview-specific behavior
+    if (this.state.activeTab === 'about') {
+      this.attachExpandButton();
+    }
+
+    // Roadmap: map or detail
     if (this.state.activeTab === 'roadmap' && !isBuildingDetail) {
       this.roadMap.attachEventListeners();
     }
-
-    // Attach back button in detail view
-    if (isBuildingDetail) {
+    if (this.state.activeTab === 'roadmap' && isBuildingDetail) {
       this.buildingDetail.attachEventListeners(() => this.backToRoadmap());
     }
 
-    // Tooltips + add-term modal
+    // Concepts tab: tooltips + add-term modal
     this.attachConceptTooltips();
     this.attachAddConceptButton();
-    this.attachExpandButton();
     this.renderCustomTerms();
   }
 
@@ -272,22 +284,30 @@ class App {
   }
 
   private showBuildingDetail(step: string): void {
-    // make sure we're in the roadmap tab when opening a detail view
-    this.state.activeTab = 'roadmap';
     this.state.currentPage = step;
     this.render(document.querySelector<HTMLDivElement>('#app')!);
   }
 
   private backToRoadmap(): void {
-    this.state.activeTab = 'roadmap';
     this.state.currentPage = 'roadmap';
     this.render(document.querySelector<HTMLDivElement>('#app')!);
   }
 
   private switchTab(tabName: string): void {
     this.state.activeTab = tabName;
-    this.state.currentPage = 'roadmap'; // reset detail view when switching tabs
-    // header already updates itself in Header.attachEventListeners()
+
+    // when switching tabs, reset roadmap to map view
+    if (tabName === 'roadmap') {
+      this.state.currentPage = 'roadmap';
+    } else {
+      this.state.currentPage = 'roadmap';
+    }
+
+    // keep header in sync
+    if ((this.header as any).updateActiveTab) {
+      (this.header as any).updateActiveTab(tabName);
+    }
+
     this.render(document.querySelector<HTMLDivElement>('#app')!);
   }
 
@@ -318,7 +338,12 @@ class App {
         </div>
         <div class="form-group">
           <label for="definition-input">Definition</label>
-          <textarea id="definition-input" placeholder="Enter a simple definition..." rows="4" required></textarea>
+          <textarea
+            id="definition-input"
+            placeholder="Enter a simple definition..."
+            rows="4"
+            required
+          ></textarea>
         </div>
         <div class="form-buttons">
           <button type="button" class="cancel-btn">Cancel</button>
@@ -340,7 +365,7 @@ class App {
       if (termInput.value.trim() && defInput.value.trim()) {
         this.customTerms.push({
           term: termInput.value.trim(),
-          definition: defInput.value.trim()
+          definition: defInput.value.trim(),
         });
         overlay.remove();
         this.renderCustomTerms();
