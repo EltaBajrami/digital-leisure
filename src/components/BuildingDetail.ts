@@ -11,37 +11,37 @@ export class BuildingDetail {
       step: '1',
       title: 'Main Building',
       description: 'This is the main building of our digital literacy project. It serves as the central hub where students can access the primary content and resources related to digital leisure. The building represents the foundation of our educational initiative, providing comprehensive information about digital literacy and modern leisure activities.',
-      image: '/src/vassar_main.jpg'
+      image: '/src/main.jpeg'
     }],
     ['2', {
       step: '2',
       title: 'Library Building',
       description: 'The library building is a comprehensive resource center where students can find extensive materials about digital leisure. Just like a traditional library, this digital space offers curated resources, research materials, and educational content to help students explore and understand various aspects of digital leisure activities.',
-      image: '/src/vassar_main.jpg'
+      image: '/src/lib.jpeg'
     }],
     ['3', {
       step: '3',
       title: 'Olmsted Building',
       description: 'The Olmsted building is dedicated to exploring traditional and modern leisure activities. This building provides insights into how leisure has evolved over time, comparing traditional forms of recreation with contemporary digital leisure experiences.',
-      image: '/src/vassar_main.jpg'
+      image: '/src/olmsted.jpeg'
     }],
     ['4', {
       step: '4',
-      title: 'Vassar Building',
+      title: 'Deece Building',
       description: 'This Vassar building focuses on the intersection of education and digital leisure. It provides resources and information about how digital leisure activities can be integrated into educational contexts, promoting both learning and recreation.',
-      image: '/src/vassar_main.jpg'
+      image: '/src/deece.jpeg'
     }],
     ['5', {
       step: '5',
-      title: 'Vassar Building',
+      title: 'Sunset Lake',
       description: 'Another important Vassar building that explores the social aspects of digital leisure. This building examines how digital leisure activities create communities, foster connections, and contribute to social well-being in the digital age.',
-      image: '/src/vassar_main.jpg'
+      image: '/src/lake.jpeg'
     }],
     ['6', {
       step: '6',
-      title: 'Vassar Building',
+      title: 'AFC',
       description: 'This final Vassar building represents the future of digital leisure. It provides forward-looking perspectives on emerging trends, technologies, and practices in digital leisure, helping students prepare for the evolving landscape of digital recreation.',
-      image: '/src/vassar_main.jpg'
+      image: '/src/afc.jpeg'
     }]
   ]);
 
