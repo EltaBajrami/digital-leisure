@@ -5,6 +5,7 @@ interface BuildingInfo {
   tryThis: string;
   connectedTo: string[];
   image: string;
+  video: string; // YouTube embed URL
 }
 
 export class BuildingDetail {
@@ -17,14 +18,15 @@ export class BuildingDetail {
         blurb:
           'Main is where a lot of your daily systems pass through at once: mail, dining access, admin errands, schedules, and campus tech. Even when nothing feels especially digital, your time here is shaped by portals, IDs, notifications, and deadlines moving in the background.',
         tryThis:
-          'Sit somewhere in Main for 10 minutes without opening Canvas, Gmail, or your phone. Just sit, wait, or people-watch.',
+          'Sit somewhere in Main for 10 minutes without opening Moodle, Gmail, or your phone. Just sit, wait, or people-watch.',
         connectedTo: [
           'Langdon Winner – “Do Artifacts Have Politics?”',
           'Janet Abbate – Inventing the Internet (infrastructure)',
-          'Graham Pickren – “The Global Assemblage of Digital Flow”'
+          'Graham Pickren – “The Global Assemblage of Digital Flow”',
         ],
-        image: '/src/main.png'
-      }
+        image: '/src/main.png',
+        video: 'https://www.youtube.com/embed/VIDEO_ID_MAIN', // TODO: replace
+      },
     ],
     [
       '2',
@@ -38,10 +40,11 @@ export class BuildingDetail {
         connectedTo: [
           'Safiya Noble – Algorithms of Oppression',
           'Tarleton Gillespie – “The Relevance of Algorithms”',
-          'Nissenbaum – “How Computer Systems Embody Values”'
+          'Nissenbaum – “How Computer Systems Embody Values”',
         ],
-        image: '/src/library.png'
-      }
+        image: '/src/library.png',
+        video: 'https://www.youtube.com/embed/VIDEO_ID_LIBRARY', // TODO: replace
+      },
     ],
     [
       '3',
@@ -55,10 +58,11 @@ export class BuildingDetail {
         connectedTo: [
           'Sadowski – “When Data is Capital”',
           'Couldry & Mejias – “Data Colonialism”',
-          'Bender et al. – “On the Dangers of Stochastic Parrots”'
+          'Bender et al. – “On the Dangers of Stochastic Parrots”',
         ],
-        image: '/src/olmsted.png'
-      }
+        image: '/src/olmsted.png',
+        video: 'https://www.youtube.com/embed/VIDEO_ID_OLMSTED', // TODO: replace
+      },
     ],
     [
       '4',
@@ -72,10 +76,11 @@ export class BuildingDetail {
         connectedTo: [
           'Lilly Irani – “The Cultural Work of Microwork”',
           'Muldoon et al. – “A Typology of AI Data Work”',
-          'Srnicek – Platform Capitalism (Chapter 2)'
+          'Srnicek – Platform Capitalism (Chapter 2)',
         ],
-        image: '/src/deece.png'
-      }
+        image: '/src/deece.png',
+        video: 'https://www.youtube.com/embed/VIDEO_ID_DEECE', // TODO: replace
+      },
     ],
     [
       '5',
@@ -89,10 +94,11 @@ export class BuildingDetail {
         connectedTo: [
           'Anna Tsing – “On Nonscalability”',
           'Ray Oldenburg – Third Places',
-          'Tsing’s nonscalable life vs optimized platforms'
+          'Tsing’s nonscalable life vs optimized platforms',
         ],
-        image: '/src/sunsetlake.png'
-      }
+        image: '/src/sunsetlake.png',
+        video: 'https://www.youtube.com/embed/VIDEO_ID_LAKE', // TODO: replace
+      },
     ],
     [
       '6',
@@ -106,10 +112,11 @@ export class BuildingDetail {
         connectedTo: [
           'Sadowski – “When Data is Capital”',
           'Couldry & Mejias – Data Colonialism and extraction',
-          'Srnicek – Platform logics applied to the body'
+          'Srnicek – Platform logics applied to the body',
         ],
-        image: '/src/afc.png'
-      }
+        image: '/src/afc.png',
+        video: 'https://www.youtube.com/embed/VIDEO_ID_AFC', // TODO: replace
+      },
     ],
     [
       '7',
@@ -123,11 +130,12 @@ export class BuildingDetail {
         connectedTo: [
           'Sasha Costanza-Chock – Design Justice (Introduction)',
           'Safiya Noble – search, race, and visibility',
-          'Gillespie – Platforms and the politics of visibility'
+          'Gillespie – Platforms and the politics of visibility',
         ],
-        image: '/src/vogelstein.png'
-      }
-    ]
+        image: '/src/vogelstein.png',
+        video: 'https://www.youtube.com/embed/VIDEO_ID_VOGEL', // TODO: replace
+      },
+    ],
   ]);
 
   public render(step: string): string {
@@ -144,6 +152,23 @@ export class BuildingDetail {
         </div>
       `;
     }
+
+    const videoSection = building.video
+      ? `
+        <div class="building-detail-video" style="margin-top: 2rem; max-width: 720px;">
+          <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 12px;">
+            <iframe
+              src="${building.video}"
+              title="${building.title} video"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+              style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+            ></iframe>
+          </div>
+        </div>
+      `
+      : '';
 
     return `
       <div class="building-detail-page">
@@ -181,6 +206,8 @@ export class BuildingDetail {
                 ${building.tryThis}
               </p>
             </div>
+
+            ${videoSection}
 
             <div class="bd-sources" style="margin-top: 1.5rem;">
               <div

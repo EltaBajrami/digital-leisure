@@ -167,7 +167,7 @@ export class RoadMap {
             <div class="roadmap-row">
               <div class="roadmap-item">
                 <h4 class="concepts-section-title">Vogelstein — Creativity & Being Seen</h4>
-                <p style="font-size: 0.95rem; line-height: 1.6%;">
+                <p style="font-size: 0.95rem; line-height: 1.6;">
                   A space for rehearsals, shows, and art-making that sits close to questions of performance, documentation, and sharing.
                 </p>
               </div>

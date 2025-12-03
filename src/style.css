@@ -897,3 +897,15 @@ img {
   opacity: 0.35;
   pointer-events: none;
 }
+
+.roadmap-item {
+  overflow: visible !important;
+  transform: none !important;
+}
+
+.roadmap-item h4,
+.roadmap-item p {
+  white-space: normal !important;
+  text-shadow: none !important;
+}
+

@@ -3,10 +3,9 @@ export class KeyConcepts {
     return `
       <section>
         <h2 class="key-concepts-title">Concepts & Keywords</h2>
-        <p style="max-width: 720px; margin-bottom: 1.5rem; font-size: 0.98rem; line-height: 1.7;">
+        <p style="max-width: 750px; margin-bottom: 1.5rem; font-size: 0.98rem; line-height: 1.7;">
           This glossary collects ideas from <em>Digital Lives</em> that sit behind the campus map.
-          Click a bubble to see a plain-language definition and a quick note about how it shows up
-          in everyday rest, distraction, or downtime.
+          Click a bubble to see our definition.
         </p>
 
         <!-- Infrastructures & Platforms -->

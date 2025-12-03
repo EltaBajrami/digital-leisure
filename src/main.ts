@@ -85,7 +85,7 @@ class App {
           <div style="margin: 1.5rem 0 0.5rem;">
             <h4 style="margin-bottom: 0.5rem;">WEBSITE FEATURES:</h4>
             <ul style="font-size: 0.98rem; line-height: 1.7; padding-left: 1.2rem; margin-bottom: 0.5rem;">
-              <li><strong>CAMPUS ROADMAP:</strong> Click each building to learn more about relevant themes!</li>
+              <li><strong>CAMPUS ROADMAP:</strong> Click each building to learn more about relevant ideas!</li>
               <li><strong>CONCEPTS & KEYWORDS:</strong> Study keywords to build your digtal literacy.</li>
             </ul>
           </div>
