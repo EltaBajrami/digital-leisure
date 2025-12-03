@@ -254,7 +254,13 @@ h4{
   .roadmap-building { margin-top:1rem; clear:both; position:relative; }
 
   /* Uniform image sizing with sketch desaturation */
-  .building-image { display:block; margin:0 auto; width:250px; height:160px; object-fit:cover; border-radius:12px; border:2px solid rgba(0,0,0,0.12); background:#fff; padding:4px; box-shadow:0 4px 12px rgba(0,0,0,0.06); cursor:pointer; transition:transform 0.28s ease, filter 0.28s ease, box-shadow 0.28s ease; filter:grayscale(75%) contrast(0.98) brightness(0.98); }
+.building-image {
+  display:block;
+  margin:0 auto;
+  width:500px;     
+  max-width:100%;
+  height:auto; 
+}
   .building-image:hover { 
     transform:translateY(-6px) 
     rotate(-0.6deg) 
@@ -269,7 +275,18 @@ h4{
   .roadmap-building::after { content:''; position:absolute; inset:0; pointer-events:none; mix-blend-mode:multiply; background-image:linear-gradient(135deg, rgba(0,0,0,0.02) 0%, rgba(0,0,0,0) 40%); opacity:0; transition:opacity 0.25s ease; }
   .roadmap-building:hover::after { opacity:0.28; }
 
-  .roadmap-description { font-size:0.85rem; color:rgba(0,0,0,0.75); margin-top:0.75rem; line-height:1.4; text-align:center; width:250px; margin-left:auto; margin-right:auto; font-style:italic; }
+.roadmap-description { 
+  font-size:1.45rem;    /* ✅ MUCH BIGGER */
+  color:rgba(0,0,0,0.8); 
+  margin-top:1rem;     /* ✅ more breathing room under image */
+  line-height:1.65; 
+  text-align:center; 
+  width:420px;         /* ✅ wider to match big buildings */
+  margin-left:auto; 
+  margin-right:auto; 
+  font-style:italic; 
+}
+
 
   /* (sketch border overlays removed per user request) */
 
@@ -446,4 +463,15 @@ h4{
     .building-detail-description p { font-size:1rem; }
     .welcome-title { font-size:1.75rem; }
   }
+
+/* ✅ FORCE full image display with no cropping */
+img {
+  width: 100%;
+  height: auto;
+  object-fit: contain !important;   /* prevents cropping */
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  display: block;
+}
 

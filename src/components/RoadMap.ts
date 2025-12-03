@@ -19,7 +19,7 @@ export class RoadMap {
             <div class="roadmap-marker marker-red"></div>
             <div class="roadmap-item roadmap-left">
               <div class="roadmap-building">
-                <img src="/src/main.jpeg" alt="Main" class="building-image clickable-image" data-step="1"/>
+                <img src="/src/main.png" alt="Main" class="building-image clickable-image" data-step="1"/>
                 <p class="roadmap-description">Main</p>
               </div>
             </div>
@@ -30,7 +30,7 @@ export class RoadMap {
             <div class="roadmap-marker marker-red"></div>
             <div class="roadmap-item roadmap-right">
               <div class="roadmap-building">
-                <img src="/src/lib.jpeg" alt="Library" class="building-image clickable-image" data-step="2" />
+                <img src="/src/library.png" alt="Library" class="building-image clickable-image" data-step="2" />
                 <p class="roadmap-description">Library</p>
               </div>
             </div>
@@ -41,7 +41,7 @@ export class RoadMap {
             <div class="roadmap-marker marker-red"></div>
             <div class="roadmap-item roadmap-left">
               <div class="roadmap-building">
-                <img src="/src/olmsted.jpeg" alt="Olmsted Building" class="building-image clickable-image" data-step="3" />
+                <img src="/src/olmsted.png" alt="Olmsted Building" class="building-image clickable-image" data-step="3" />
                 <p class="roadmap-description">Olmsted</p>
               </div>
             </div>
@@ -52,7 +52,7 @@ export class RoadMap {
             <div class="roadmap-marker marker-red"></div>
             <div class="roadmap-item roadmap-right">
               <div class="roadmap-building">
-                <img src="/src/deece.jpeg" alt="Deece" class="building-image clickable-image" data-step="4" />
+                <img src="/src/deece.png" alt="Deece" class="building-image clickable-image" data-step="4" />
                 <p class="roadmap-description"> Deece </p>
               </div>
             </div>
@@ -63,7 +63,7 @@ export class RoadMap {
             <div class="roadmap-marker marker-red"></div>
             <div class="roadmap-item roadmap-left">
               <div class="roadmap-building">
-                <img src="/src/lake.jpeg" alt="Sunset Lake" class="building-image clickable-image" data-step="5" />
+                <img src="/src/sunsetlake.png" alt="Sunset Lake" class="building-image clickable-image" data-step="5" />
                 <p class="roadmap-description">Sunset Lake</p>
               </div>
             </div>
@@ -74,7 +74,7 @@ export class RoadMap {
             <div class="roadmap-marker marker-red"></div>
             <div class="roadmap-item roadmap-right">
               <div class="roadmap-building">
-                <img src="/src/afc.jpeg" alt="AFC" class="building-image clickable-image" data-step="6" />
+                <img src="/src/afc.png" alt="AFC" class="building-image clickable-image" data-step="6" />
                 <p class="roadmap-description"> AFC </p>
               </div>
             </div>
@@ -85,7 +85,7 @@ export class RoadMap {
             <div class="roadmap-marker marker-red"></div>
             <div class="roadmap-item roadmap-left">
               <div class="roadmap-building">
-                <img src="/src/vogel.jpeg" alt="Vogelstein" class="building-image clickable-image" data-step="7" />
+                <img src="/src/vogelstein.png" alt="Vogelstein" class="building-image clickable-image" data-step="7" />
                 <p class="roadmap-description">Vogelstein</p>
               </div>
             </div>
