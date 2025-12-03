@@ -49,62 +49,56 @@ class App {
       <main class="content-section" id="about-welcome-content" style="display: ${
         this.state.activeTab === 'about' && !isBuildingDetail ? 'block' : 'none'
       }">
+      <main class="content-section" id="about-welcome-content" style="display: ${this.state.activeTab === 'about' && !isBuildingDetail ? 'block' : 'none'}">
         <div class="welcome-section">
-          <p class="welcome-title">LEISURE IN THE DIGITAL AGE</p>
-
-          <p style="font-size: 1.1rem; line-height: 1.7; margin-top: 0.75rem;">
-            This site is a resource for reimagining leisure in a world where so much of our “free time” runs through platforms, feeds, and algorithms. Instead of treating rest as passive, efficient consumption, it asks what leisure could look like if we centered slowness, care, creativity, and collective joy.
+          <p class="welcome-title">Leisure in the Digital Age</p>
+          
+          <p style="font-size: 1.05rem; line-height: 1.8; margin-bottom: 0.75rem;">
+            This site is a small field guide for reimagining leisure at Vassar. It takes ideas from
+            <em>Digital Lives</em>—infrastructure, platform capitalism, datafication, algorithmic management,
+            AI, and nonscalability—and drops them into the spaces where you actually spend your time.
+          </p>
+          <p style="font-size: 1.05rem; line-height: 1.8; margin-bottom: 1rem;">
+            The campus roadmap connects course concepts to familiar buildings. Each stop asks:
+            <span style="font-style: italic;">What does “rest” look like here? Who makes it possible? Whose time,
+            data, or labor is being optimized?</span> The goal is not to reject digital leisure, but to notice how it
+            is structured—and to imagine slower, less efficient, more self-directed forms of pleasure.
           </p>
 
-          <p style="font-size: 1.05rem; line-height: 1.7; margin-top: 1rem;">
-            The campus roadmap grounds these questions in Vassar life. Each building becomes a small thought experiment: how do digital systems already shape how you move, scroll, study, rest, and socialize here—and what other forms of leisure might be possible in these same spaces?
-          </p>
+          <div style="margin: 1.5rem 0 0.5rem;">
+            <h4 style="margin-bottom: 0.5rem;">How to use this site</h4>
+            <ul style="font-size: 0.98rem; line-height: 1.7; padding-left: 1.2rem; margin-bottom: 0.5rem;">
+              <li><strong>Walk the map:</strong> Click each building to see how digital systems are shaping leisure there.</li>
+              <li><strong>Compare modes of rest:</strong> Use the tabs to move between traditional and digital-age leisure.</li>
+              <li><strong>Play with concepts:</strong> Explore the keyword bubbles, or add your own terms and definitions.</li>
+            </ul>
+          </div>
 
-          <p style="font-size: 1.05rem; line-height: 1.7; margin-top: 1rem;">
-            Use this site as a guide, not a verdict: a way to notice where your time goes, who benefits from your “relaxation,” and how you might reclaim pockets of autonomy, play, and genuine rest in the middle of your digital life.
-          </p>
-
-          <div style="margin-top: 2rem;">
-            <button
-              id="expand-shift-btn"
-              style="
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                width: 100%;
-                padding: 1.25rem 1.5rem;
-                background: rgba(255, 230, 199, 0.5);
-                border: 2px solid var(--hover-accent);
-                border-radius: 12px;
-                font-weight: 600;
-                font-size: 1.05rem;
-                cursor: pointer;
-                transition: all 0.2s ease;
-                color: var(--warm-ink);
-              "
-            >
-              <span>Shift from TRADITIONAL LEISURE to DIGITAL-AGE LEISURE →</span>
+          <div style="margin-top: 1.5rem;">
+            <button id="expand-shift-btn" style="display: flex; align-items: center; justify-content: space-between; width: 100%; padding: 1.25rem 1.5rem; background: rgba(255, 230, 199, 0.5); border: 2px solid var(--hover-accent); border-radius: 12px; font-weight: 600; font-size: 1.05rem; cursor: pointer; transition: all 0.2s ease; color: var(--warm-ink);">
+              <span>From traditional leisure to platformed rest →</span>
               <span id="expand-icon" style="font-size: 1.3rem; transition: transform 0.3s ease;">▼</span>
             </button>
-            <div
-              id="shift-content"
-              style="
-                display: none;
-                margin-top: 1rem;
-                padding: 1.5rem;
-                background: rgba(255, 230, 199, 0.3);
-                border-radius: 12px;
-                border-left: 4px solid var(--hover-accent);
-                animation: slideDown 0.3s ease;
-              "
-            >
-              <p style="line-height: 1.6;">
-                Platforms increasingly redefine relaxation as easy, passive, entertaining consumption—no longer primarily about reflection, creativity, or social connection. “Free time” becomes measurable and optimizable, often quantified through engagement metrics, streaks, and recommendations rather than self-directed choice.
+            <div id="shift-content" style="display: none; margin-top: 1rem; padding: 1.5rem; background: rgba(255, 230, 199, 0.3); border-radius: 12px; border-left: 4px solid var(--hover-accent); animation: slideDown 0.3s ease;">
+              <p style="line-height: 1.7; margin-bottom: 0.75rem;">
+                Traditional leisure often meant <strong>active, self-directed participation</strong>: reading, crafts,
+                pickup games, long conversations in third spaces. Stimulation was not constant; satisfaction came from
+                mastery, presence, or shared time.
+              </p>
+              <p style="line-height: 1.7; margin-bottom: 0.75rem;">
+                Digital-age leisure is increasingly organized by <strong>platforms, algorithms, and metrics</strong>.
+                Rest becomes an endless scroll or auto-generated playlist, optimized for engagement rather than reflection.
+              </p>
+              <p style="line-height: 1.7;">
+                This website asks what is gained—and what is lost—when your “breaks” are scripted by infrastructures,
+                recommendation systems, and data extraction. Where on campus can you still practice slow, messy,
+                unproductive forms of rest?
               </p>
             </div>
           </div>
         </div>
       </main>
+
       <main class="content-section roadmap-main" id="about-roadmap-content" style="display: ${
         this.state.activeTab === 'about' && !isBuildingDetail ? 'block' : 'none'
       }">
