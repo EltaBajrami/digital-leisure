@@ -19,7 +19,7 @@ export class RoadMap {
             <div class="roadmap-marker marker-red"></div>
             <div class="roadmap-item roadmap-left">
               <div class="roadmap-building">
-                <img src="/src/vassar_main.jpg" alt="Vassar Building" class="building-image clickable-image" data-step="1" />
+                <img src="/src/main.jpeg" alt="Main Building" class="building-image clickable-image" data-step="1"/>
                 <p class="roadmap-description">(Clickable image of main building showing main content from the source related to our project)</p>
               </div>
             </div>
@@ -27,10 +27,10 @@ export class RoadMap {
 
           <!-- Step 2 -->
           <div class="roadmap-step" style="top: 280px;">
-            <div class="roadmap-marker marker-blue"></div>
+            <div class="roadmap-marker marker-red"></div>
             <div class="roadmap-item roadmap-right">
               <div class="roadmap-building">
-                <img src="/src/vassar_main.jpg" alt="Vassar Building" class="building-image clickable-image" data-step="2" />
+                <img src="/src/lib.jpeg" alt="Library Building" class="building-image clickable-image" data-step="2" />
                 <p class="roadmap-description">Image of the library where (when they click they can find 'resources' about digital leisure like you find resources on a library)</p>
               </div>
             </div>
@@ -38,10 +38,10 @@ export class RoadMap {
 
           <!-- Step 3 -->
           <div class="roadmap-step" style="top: 560px;">
-            <div class="roadmap-marker marker-green"></div>
+            <div class="roadmap-marker marker-red"></div>
             <div class="roadmap-item roadmap-left">
               <div class="roadmap-building">
-                <img src="/src/vassar_main.jpg" alt="Vassar Building" class="building-image clickable-image" data-step="3" />
+                <img src="/src/olmsted.jpeg" alt="Olmsted Building" class="building-image clickable-image" data-step="3" />
                 <p class="roadmap-description">(Olmsted building)</p>
               </div>
             </div>
@@ -49,36 +49,48 @@ export class RoadMap {
 
           <!-- Step 4 -->
           <div class="roadmap-step" style="top: 840px;">
-            <div class="roadmap-marker marker-purple"></div>
+            <div class="roadmap-marker marker-red"></div>
             <div class="roadmap-item roadmap-right">
               <div class="roadmap-building">
-                <img src="/src/vassar_main.jpg" alt="Vassar Building" class="building-image clickable-image" data-step="4" />
-                <p class="roadmap-description">Another Vassar building</p>
+                <img src="/src/deece.jpeg" alt="Deece Building" class="building-image clickable-image" data-step="4" />
+                <p class="roadmap-description"> Deece building</p>
               </div>
             </div>
           </div>
 
           <!-- Step 5 -->
           <div class="roadmap-step" style="top: 1120px;">
-            <div class="roadmap-marker marker-pink"></div>
+            <div class="roadmap-marker marker-red"></div>
             <div class="roadmap-item roadmap-left">
               <div class="roadmap-building">
-                <img src="/src/vassar_main.jpg" alt="Vassar Building" class="building-image clickable-image" data-step="5" />
-                <p class="roadmap-description">Another Vassar building</p>
+                <img src="/src/lake.jpeg" alt="Sunset Lake" class="building-image clickable-image" data-step="5" />
+                <p class="roadmap-description">Sunset Lake</p>
               </div>
             </div>
           </div>
 
           <!-- Step 6 -->
           <div class="roadmap-step" style="top: 1400px;">
-            <div class="roadmap-marker marker-orange"></div>
+            <div class="roadmap-marker marker-red"></div>
             <div class="roadmap-item roadmap-right">
               <div class="roadmap-building">
-                <img src="/src/vassar_main.jpg" alt="Vassar Building" class="building-image clickable-image" data-step="6" />
-                <p class="roadmap-description">Another Vassar building</p>
+                <img src="/src/afc.jpeg" alt="AFC Building" class="building-image clickable-image" data-step="6" />
+                <p class="roadmap-description"> AFC building</p>
               </div>
             </div>
           </div>
+
+          <!-- Step 7 -->
+          <div class="roadmap-step" style="top: 1600px;">
+            <div class="roadmap-marker marker-red"></div>
+            <div class="roadmap-item roadmap-left">
+              <div class="roadmap-building">
+                <img src="/src/vogel.jpeg" alt="Vogelstein Building" class="building-image clickable-image" data-step="7" />
+                <p class="roadmap-description">Vogelstein Building</p>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     `;
