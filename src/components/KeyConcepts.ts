@@ -24,7 +24,7 @@ export class KeyConcepts {
       <div class="concepts-bubbles">
         <span class="concept-bubble concept-has-definition" data-term="Reification" data-definition="Making something abstract or theoretical feel real and tangible—turning ideas into concrete objects or experiences.">Reification</span>
         <span class="concept-bubble concept-has-definition" data-term="Gamification" data-definition="Adding game-like elements (points, badges, levels) to non-game activities to make them more engaging and fun.">Gamification</span>
-        <span class="concept-bubble concept-has-definition" data-term="Gammafication" data-definition="A playful term (possibly a twist on gamification) or a specific concept explored in your project—check your course materials!">Gammafication</span>
+        <span class="concept-bubble concept-has-definition" data-term="Datafication" data-definition="___">Datafication</span>
       </div>
       <div id="custom-concepts-section" style="display: none;">
         <h4 class="concepts-section-title">My Custom Terms</h4>
