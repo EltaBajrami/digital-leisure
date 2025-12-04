@@ -148,8 +148,7 @@ class App {
       </main>
 
       <!-- Campus Roadmap (ROADMAP TAB: MAP VIEW) -->
-      <main
-        class="content-section roadmap-main"
+      <div
         id="about-roadmap-content"
         style="display: ${
           this.state.activeTab === 'roadmap' && !isBuildingDetail ? 'block' : 'none'
@@ -158,7 +157,7 @@ class App {
         <div class="roadmap-section">
           ${this.roadMap.render()}
         </div>
-      </main>
+      </div>
 
       <!-- Building Detail (ROADMAP TAB: DETAIL VIEW) -->
       <main
