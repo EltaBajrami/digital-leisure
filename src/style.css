@@ -18,8 +18,7 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
   line-height: 1.6;
   color: var(--warm-ink);
-  /* slightly deeper warm background to match peach accents */
-  background: #ffeede;
+  background: #ffeede;  /* slightly deeper warm background to match peach accents */
   min-height: 100vh;
   position: relative;
 }
@@ -49,33 +48,56 @@ body::after {
 }
 
 #app {
-  max-width:1200px;
-  margin:0 auto;
-  padding:2rem;
-  position:relative;
-  z-index:1;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;   /* no top/bottom padding, just horizontal */
+  position: relative;
+  z-index: 1;
+}
+
+/* full-width doodle borders at very top & bottom of the screen */
+.screen-border {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);  /* break out of the 1200px #app column */
+}
+
+.screen-border img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.screen-border-top {
+  margin-bottom: 0rem;
+}
+
+.screen-border-bottom {
+  margin-top: 0rem;
 }
 
 /* Header */
 .sticky-header {
-  position:sticky;
-  top:20px;
-  z-index:100;
-  margin-bottom:2rem;
-  width:100%;
+  position: relative;   /* not sticky, just styled header */
+  top: 0;
+  z-index: 10;
+  width: 100%;
+  margin-bottom: 1.75rem;  /* space between buttons and main box */
 }
+
+/* NAV CONTAINER – let the buttons float on their own */
 .header-nav {
-  display:flex;
-  justify-content:center;
-  gap:1rem;
-  background:rgba(255, 214, 170, 0.35);
-  border-radius:40px;
-  padding:0.6rem 1.2rem;
-  box-shadow:0 4px 12px rgba(154, 81, 37, 0.25);
-  border:1px solid rgba(154, 81, 37, 0.25);
-  max-width:fit-content;
-  margin:0 auto;
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  background: transparent;
+  border-radius: 0;
+  padding: 0;
+  box-shadow: none;
+  border: none;
+  max-width: none;
+  margin: 1rem auto 0;
 }
+
 .nav-tab {
   background: rgba(255, 230, 199, 0.6);
   border: 2px solid rgba(154, 81, 37, 0.6);
@@ -90,12 +112,14 @@ body::after {
   transition: transform 0.22s ease, background 0.22s ease, color 0.22s ease, box-shadow 0.22s ease;
   box-shadow: 0 1px 0 rgba(154, 81, 37, 0.45);
 }
+
 .nav-tab:hover {
   background: rgba(255, 214, 170, 0.9);
   color: var(--warm-ink);
   transform: translateY(-2px) rotate(-1deg);
   box-shadow: 0 3px 0 rgba(0,0,0,0.3);
 }
+
 .nav-tab.active {
   background: rgba(255, 214, 170, 1);
   color: var(--warm-ink);
@@ -104,15 +128,16 @@ body::after {
   transform: translateY(-1px) rotate(-0.5deg);
 }
 
-main { 
-  background:rgba(255,250,243,0.96); 
-  border-radius:20px; 
-  padding:2.5rem; 
-  box-shadow:0 8px 20px rgba(154,81,37,0.12); 
-  border:1px solid rgba(154,81,37,0.18); 
-  position:relative; 
-  margin-bottom:2rem; 
-  z-index:2; 
+/* Main content card */
+main {
+  background: rgba(255,250,243,0.96);
+  border-radius: 20px;
+  padding: 2.5rem;
+  box-shadow: 0 8px 20px rgba(154,81,37,0.12);
+  border: 1px solid rgba(154,81,37,0.18);
+  position: relative;
+  margin-bottom: 2rem;
+  z-index: 2;
 }
 
 /* Hand-drawn font for headings (loaded from index.html) */
@@ -127,27 +152,29 @@ h1, h2, h3 {
 }
 
 .welcome-title {
-  font-size:2.7rem;
-  font-weight:700;
-  margin-bottom:1.5rem;
-  letter-spacing:1px;
+  font-size: 2.7rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  letter-spacing: 1px;
 }
+
 .key-concepts-title {
-  font-size:2rem;
-  font-weight:700;
-  margin-bottom:2rem;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
 }
+
 .concepts-section-title {
-  font-size:1.5rem;
-  font-weight:600;
-  margin:2.5rem 0 1.5rem 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 2.5rem 0 1.5rem 0;
 }
 
 /* Concept bubbles */
-.concepts-bubbles { 
-  display:flex; 
-  flex-wrap:wrap; 
-  gap:1rem;
+.concepts-bubbles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
 .concept-bubble {
@@ -178,7 +205,7 @@ h1, h2, h3 {
   box-shadow: 0 4px 0 rgba(154, 81, 37, 0.5);
 }
 
-/* Modal popup for concept definitions */
+/* Concept modal */
 .concept-has-definition {
   cursor: pointer;
 }
@@ -254,12 +281,8 @@ h4 {
 }
 
 @keyframes modal-fade-in {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+  from { opacity: 0; }
+  to   { opacity: 1; }
 }
 
 @keyframes modal-slide-up {
@@ -273,21 +296,7 @@ h4 {
   }
 }
 
-@keyframes slideDown {
-  from {
-    opacity: 0;
-    max-height: 0;
-    transform: translateY(-10px);
-  }
-  to {
-    opacity: 1;
-    max-height: 500px;
-    transform: translateY(0);
-  }
-}
-
-/* Road map */
-/* Road map */
+/* Road map container */
 .roadmap-container {
   position: relative;
   padding: 2rem 1.5rem;
@@ -296,11 +305,8 @@ h4 {
 
   /* organic map surface + subtle graph overlay */
   background:
-    /* very soft grid layer */
     linear-gradient(to right, rgba(0,0,0,0.035) 1px, transparent 1px),
     linear-gradient(to bottom, rgba(0,0,0,0.03) 1px, transparent 1px),
-
-    /* organic, natural map blotches */
     radial-gradient(1200px 420px at 10% 15%, rgba(255, 255, 255, 0.9), transparent 60%),
     radial-gradient(900px 380px at 90% 20%, rgba(255, 245, 225, 0.7), transparent 65%),
     radial-gradient(700px 500px at 30% 85%, rgba(255, 230, 199, 0.55), transparent 70%),
@@ -309,8 +315,8 @@ h4 {
     linear-gradient(180deg, #fff8ee, #fff1e0);
 
   background-size:
-    42px 42px,   /* grid cell size horizontal */
-    42px 42px,   /* grid cell size vertical */
+    42px 42px,
+    42px 42px,
     auto, auto, auto, auto, auto, auto;
 
   box-shadow:
@@ -320,7 +326,6 @@ h4 {
   border: 1px solid rgba(154, 81, 37, 0.14);
   overflow: hidden;
 }
-
 
 .roadmap-title {
   font-size: 2rem;
@@ -338,7 +343,6 @@ h4 {
   padding: 0 0 1rem;
 }
 
-/* central “route” line = curvy, dashed, sketchy trail */
 .roadmap-timeline::before {
   content: "";
   position: absolute;
@@ -346,7 +350,7 @@ h4 {
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: 18px;                 /* wider so the chaos breathes */
+  width: 18px;
 
   background-image: url("data:image/svg+xml;utf8,\
 <svg xmlns='http://www.w3.org/2000/svg' width='18' height='360' viewBox='0 0 18 360'>\
@@ -363,9 +367,28 @@ h4 {
 </svg>");
   background-repeat: repeat-y;
   background-position: center top;
-  background-size: 18px 260px;   /* controls amount of curvature + surprise */
-
+  background-size: 18px 260px;
   opacity: 0.75;
+  pointer-events: none;
+}
+
+/* tiny dotted trail echoes */
+.roadmap-timeline::after {
+  content: "";
+  position: absolute;
+  top: 4%;
+  bottom: 4%;
+  left: 49.2%;
+  width: 2px;
+  background-image:
+    repeating-linear-gradient(
+      to bottom,
+      rgba(154, 81, 37, 0.25),
+      rgba(154, 81, 37, 0.25) 4px,
+      transparent 4px,
+      transparent 14px
+    );
+  opacity: 0.35;
   pointer-events: none;
 }
 
@@ -410,12 +433,11 @@ h4 {
   position: relative; /* for overlays + you-are-here label */
 }
 
-/* VISIT HERE HERE HOVERS with the building */
+/* VISIT HERE label hovers with the building */
 .roadmap-building:hover .building-image {
   outline: none;
   animation: youAreHerePulse 2.4s ease-out infinite;
 }
-
 
 /* label lives on every building but only shows on hover */
 .roadmap-building::before {
@@ -464,15 +486,9 @@ h4 {
 
 /* pulse for "you are here" */
 @keyframes youAreHerePulse {
-  0% {
-    box-shadow: 0 0 0 0 rgba(194, 106, 61, 0.45);
-  }
-  60% {
-    box-shadow: 0 0 0 16px rgba(194, 106, 61, 0);
-  }
-  100% {
-    box-shadow: 0 0 0 0 rgba(194, 106, 61, 0);
-  }
+  0%   { box-shadow: 0 0 0 0 rgba(194, 106, 61, 0.45); }
+  60%  { box-shadow: 0 0 0 16px rgba(194, 106, 61, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(194, 106, 61, 0); }
 }
 
 /* buildings stay big but contained */
@@ -537,89 +553,93 @@ h4 {
 
 /* Uniform image sizing with sketch desaturation */
 .building-image {
-  display:block;
-  margin:0 auto;
-  width:500px;     
-  max-width:100%;
-  height:auto; 
+  display: block;
+  margin: 0 auto;
+  width: 500px;
+  max-width: 100%;
+  height: auto;
 }
-.building-image:hover { 
-  transform:translateY(-6px) rotate(-0.6deg) scale(1.03); 
-  box-shadow:0 10px 28px rgba(0,0,0,0.10); 
-  border-color:var(--hover-accent); 
-  filter:none;
+
+.building-image:hover {
+  transform: translateY(-6px) rotate(-0.6deg) scale(1.03);
+  box-shadow: 0 10px 28px rgba(0,0,0,0.10);
+  border-color: var(--hover-accent);
+  filter: none;
 }
 
 .building-image:focus,
 .building-image:active {
-  outline:3px solid var(--hover-accent);
-  outline-offset:2px;
+  outline: 3px solid var(--hover-accent);
+  outline-offset: 2px;
 }
 
 /* Building detail page */
 .building-detail-page {
-  padding:2rem;
-}
-.back-button {
-  background:rgba(255,255,255,0.25);
-  border-radius:25px;
-  padding:0.75rem 1.5rem;
-  color:#111;
-  border:1px solid rgba(0,0,0,0.06);
-  cursor:pointer;
-  transition:all 0.22s ease;
-  font-weight:500;
-}
-.back-button:hover {
-  background:var(--hover-accent);
-  color:var(--hover-accent-text);
-  transform:translateX(-5px);
-  border-color:var(--hover-accent);
-}
-.building-detail-content {
-  text-align:center;
-}
-.building-detail-title {
-  font-size:2.5rem;
-  font-weight:700;
-  margin-bottom:2rem;
-}
-.building-detail-image-container {
-  margin:2rem 0;
-  display:flex;
-  justify-content:center;
-}
-.building-detail-image {
-  width:600px;
-  max-width:100%;
-  height:auto;
-  max-height:400px;
-  object-fit:contain;
-  border-radius:16px;
-  border:3px solid rgba(0,0,0,0.08);
-  box-shadow:0 8px 32px rgba(0,0,0,0.06);
-  background:#fff;
-  padding:8px;
-}
-.building-detail-description {
-  max-width:800px;
-  margin:2rem auto;
-  padding:2rem;
-  background:rgba(255,255,255,0.98);
-  border-radius:16px;
-  border:1px solid rgba(0,0,0,0.06);
-}
-.building-detail-description p {
-  color:rgba(0,0,0,0.85);
-  font-size:1.1rem;
-  line-height:1.8;
-  text-align:left;
+  padding: 2rem;
 }
 
-/* Refined building detail layout */
+.back-button {
+  background: rgba(255,255,255,0.25);
+  border-radius: 25px;
+  padding: 0.75rem 1.5rem;
+  color: #111;
+  border: 1px solid rgba(0,0,0,0.06);
+  cursor: pointer;
+  transition: all 0.22s ease;
+  font-weight: 500;
+}
+
+.back-button:hover {
+  background: var(--hover-accent);
+  color: var(--hover-accent-text);
+  transform: translateX(-5px);
+  border-color: var(--hover-accent);
+}
+
+.building-detail-content {
+  text-align: center;
+}
+
+.building-detail-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+.building-detail-image-container {
+  margin: 2rem 0;
+  display: flex;
+  justify-content: center;
+}
+
+.building-detail-image {
+  width: 600px;
+  max-width: 100%;
+  height: auto;
+  max-height: 400px;
+  object-fit: contain;
+  border-radius: 16px;
+  border: 3px solid rgba(0,0,0,0.08);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.06);
+  background: #fff;
+  padding: 8px;
+}
+
+/* merged/refined detail layout */
 .building-detail-description {
   max-width: 720px;
   margin: 2rem auto 0;
+  padding: 2rem;
+  background: rgba(255,255,255,0.98);
+  border-radius: 16px;
+  border: 1px solid rgba(0,0,0,0.06);
+}
+
+.building-detail-description p {
+  color: rgba(0,0,0,0.85);
+  font-size: 1.1rem;
+  line-height: 1.8;
+  text-align: left;
 }
 
 .bd-try {
@@ -664,11 +684,12 @@ h4 {
   margin-bottom: 0.15rem;
 }
 
+/* Footer */
 footer {
-  text-align:center;
-  color:rgba(0,0,0,0.65);
-  margin-top:3rem;
-  padding:2rem 0;
+  text-align: center;
+  color: rgba(0,0,0,0.65);
+  margin-top: 3rem;
+  padding: 2rem 0;
 }
 
 /* Floating Add Button */
@@ -818,94 +839,81 @@ footer {
   margin-top: 2rem;
 }
 
+/* Responsive tweaks */
 @media (max-width:768px) {
   .roadmap-timeline {
-    position:relative;
-    min-height:3600px;
-    margin:2rem 0 4rem;
-    padding-bottom:3rem;
-    overflow:hidden;
+    position: relative;
+    min-height: 3600px;
+    margin: 2rem 0 4rem;
+    padding-bottom: 3rem;
+    overflow: hidden;
   }
+
   .roadmap-item {
-    width:100%;
-    float:none;
-    text-align:left;
-    padding:0 1rem 2rem;
+    width: 100%;
+    float: none;
+    text-align: left;
+    padding: 0 1rem 2rem;
   }
+
   .roadmap-marker {
-    left:1.5rem;
-    transform:none;
+    left: 1.5rem;
+    transform: none;
   }
+
   .timeline-line {
-    left:1.5rem;
-    transform:none;
+    left: 1.5rem;
+    transform: none;
   }
+
   .roadmap-building {
-    margin-left:2.5rem;
+    margin-left: 2.5rem;
   }
+
   .building-image {
-    width:150px;
-    height:110px;
+    width: 150px;
+    height: 110px;
   }
+
   .roadmap-description {
-    max-width:220px;
-    font-size:0.8rem;
+    max-width: 220px;
+    font-size: 0.8rem;
   }
+
   .building-detail-image {
-    max-width:400px;
+    max-width: 400px;
   }
+
   .building-detail-description {
-    padding:1.5rem;
+    padding: 1.5rem;
   }
+
   .building-detail-description p {
-    font-size:1rem;
+    font-size: 1rem;
   }
+
   .welcome-title {
-    font-size:1.75rem;
+    font-size: 1.75rem;
   }
 }
 
+/* Global img reset – buildings / borders override as needed */
 img {
   width: 100%;
   height: auto;
   object-fit: contain !important;   /* prevents cropping */
   background: transparent !important;
-  border: none !IMPORTANT;
+  border: none !important;
   box-shadow: none !important;
   display: block;
 }
 
-
-/* tiny dotted trail echoes */
-.roadmap-timeline::after {
-  content: "";
-  position: absolute;
-  top: 4%;
-  bottom: 4%;
-  left: 49.2%;
-  width: 2px;
-
-  background-image:
-    repeating-linear-gradient(
-      to bottom,
-      rgba(154, 81, 37, 0.25),
-      rgba(154, 81, 37, 0.25) 4px,
-      transparent 4px,
-      transparent 14px
-    );
-
-  opacity: 0.35;
-  pointer-events: none;
+.roadmap-item h4 {
+  position: relative !important;
+  line-height: 1.4 !important;
+  letter-spacing: normal !important;
 }
 
-.roadmap-item {
-  overflow: visible !important;
-  transform: none !important;
+footer {
+  display: none;
 }
-
-.roadmap-item h4,
-.roadmap-item p {
-  white-space: normal !important;
-  text-shadow: none !important;
-}
-

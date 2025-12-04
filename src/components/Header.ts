@@ -1,10 +1,10 @@
-export type TabChangeCallback = (tabName: string) => void;
+// src/components/Header.ts
 
 export class Header {
   private activeTab: string;
-  private onTabChange: TabChangeCallback;
+  private onTabChange: (tabName: string) => void;
 
-  constructor(activeTab: string, onTabChange: TabChangeCallback) {
+  constructor(activeTab: string, onTabChange: (tabName: string) => void) {
     this.activeTab = activeTab;
     this.onTabChange = onTabChange;
   }
@@ -23,7 +23,7 @@ export class Header {
             class="nav-tab ${this.activeTab === 'roadmap' ? 'active' : ''}"
             data-tab="roadmap"
           >
-            Campus Roadmap
+            Campus Map
           </button>
           <button
             class="nav-tab ${this.activeTab === 'concepts' ? 'active' : ''}"
@@ -38,28 +38,17 @@ export class Header {
 
   public attachEventListeners(): void {
     const tabs = document.querySelectorAll<HTMLButtonElement>('.nav-tab');
-
-    tabs.forEach(tab => {
+    tabs.forEach((tab) => {
       tab.addEventListener('click', () => {
-        const tabName = tab.getAttribute('data-tab');
-        if (!tabName) return;
-
-        this.setActiveTab(tabName);
-        this.onTabChange(tabName);
+        const tabName = tab.dataset.tab;
+        if (tabName) {
+          this.onTabChange(tabName);
+        }
       });
     });
   }
 
-  private setActiveTab(tabName: string): void {
+  public updateActiveTab(tabName: string): void {
     this.activeTab = tabName;
-
-    const tabs = document.querySelectorAll<HTMLButtonElement>('.nav-tab');
-    tabs.forEach(tab => {
-      if (tab.getAttribute('data-tab') === tabName) {
-        tab.classList.add('active');
-      } else {
-        tab.classList.remove('active');
-      }
-    });
   }
 }
