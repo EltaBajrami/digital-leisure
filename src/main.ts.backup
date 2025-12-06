@@ -163,7 +163,14 @@ class App {
           </div>
         </div>
 
-       
+        <!-- Connected narrative (condensed intro tying all sections together) -->
+        <section style="margin-top: 2rem;">
+          <h3 style="font-family: 'Bungee Shade', cursive; color: var(--warm-ink); margin-bottom: 1rem;">Leisure in the Digital Age</h3>
+          <p style="font-size: 1.05rem; line-height: 1.8; margin-bottom: 1rem;">In the past, leisure lived in quiet corners—books, parks, game nights, craft tables. It did not chase metrics or novelty. Value came from doing: creativity, reflection, skill, and social presence. Today, platforms rewrite free time as effortless, passive, frictionless consumption.</p>
+          <p style="font-size: 1.05rem; line-height: 1.8; margin-bottom: 1rem;">Recommendation engines, notifications, and infinite scroll orchestrate attention. Gamified streaks and rewards condition return. Apps promise convenience; AI removes friction. Leisure becomes optimized, entertaining, and efficient—curated by systems rather than self-directed.</p>
+          <p style="font-size: 1.05rem; line-height: 1.8;">As third spaces disappear, digital platforms offer activity without agency. We risk losing slow creativity and social intimacy, while “fun” becomes a product shaped by engagement metrics. Our projects—podcasts, mini-documentaries, museum exhibits, and platform audits—explore this shift and ask how rest can become slower, shared, and truly self-directed again.</p>
+        </section>
+      </main>
 
       <!-- Campus Roadmap (ROADMAP TAB: MAP VIEW) -->
       <div
