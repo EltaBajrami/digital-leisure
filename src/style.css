@@ -970,6 +970,89 @@ footer {
   display: none;
 }
 
+/* Info cards section under overview */
+.info-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  margin-top: 1rem;
+}
+
+.card {
+  position: relative;
+  background: #fff;
+  border-radius: 16px;
+  padding: 1.25rem 1.25rem 1.5rem;
+  box-shadow: 0 8px 20px rgba(154,81,37,0.12);
+  border: 1px solid rgba(154,81,37,0.18);
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
+  text-align: center;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(154,81,37,0.18);
+}
+
+.card-accent {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 28px;
+  height: 6px;
+  border-radius: 6px;
+}
+
+.accent-pink { background: #c26a3d; }
+.accent-blue { background: #c26a3d; }
+.accent-yellow { background: #c26a3d; }
+
+.card-icon {
+  font-size: 2.2rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: var(--warm-ink);
+  margin: 0.25rem auto 0.9rem;
+}
+
+.card-title {
+  font-family: 'Bungee Shade', cursive;
+  color: var(--warm-ink);
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.card-body {
+  font-size: 0.96rem;
+  line-height: 1.6;
+  color: rgba(0,0,0,0.8);
+  margin-bottom: 0.9rem;
+}
+
+.card-cta {
+  background: var(--hover-accent);
+  color: var(--hover-accent-text);
+  border: none;
+  padding: 0.55rem 1rem;
+  border-radius: 999px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.card-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  background: #d47a4d;
+}
+
+@media (max-width: 900px) {
+  .info-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* Posters Slideshow Styles */
 .posters-main {
   padding: 3rem 2rem;

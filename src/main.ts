@@ -59,18 +59,6 @@ class App {
       >
         <div class="welcome-section">
           <p class="welcome-title">Exploring Digital-Age Leisure!</p>
-          <p
-            style="
-              margin-top: 0.2rem;
-              margin-bottom: 1.25rem;
-              font-size: 0.95rem;
-              letter-spacing: 0.04em;
-              text-transform: uppercase;
-              opacity: 0.8;
-            "
-          >
-            <strong> STS-236 </strong> <em> digital lives </em> : a final project by Alexandra, Ella, & Elta
-          </p>
           
           <p style="font-size: 1.05rem; line-height: 1.8; margin-bottom: 0.75rem;">
             This site is a small guide for noticing how your free time is shaped by digital systems.
@@ -145,6 +133,43 @@ class App {
             </div>
           </div>
         </div>
+        
+        <footer style="text-align: center; margin-top: 3rem; padding: 2rem 0; color: rgba(0,0,0,0.65);">
+          <p>STS-236 Digital Lives: A Final Project by Alexandra, Ella, & Elta</p>
+        </footer>
+
+        <!-- Info cards section: three small cards -->
+        <div class="info-cards" style="margin-top: 1rem;">
+          <div class="card">
+            <div class="card-accent accent-pink"></div>
+            <div class="card-icon" aria-hidden="true">01</div>
+            <p class="card-title">Algorithmic Leisure</p>
+            <p class="card-body">Leisure becomes passive, optimized by platforms. Engagement is measured, novelty constant, and rest is curated rather than chosen.</p>
+            <button class="card-cta">Read Me</button>
+          </div>
+          <div class="card">
+            <div class="card-accent accent-blue"></div>
+            <div class="card-icon" aria-hidden="true">02</div>
+            <h4 class="card-title">Engagement Systems</h4>
+            <p class="card-body">Recommendations, notifications, and infinite scroll shape attention. Gamified streaks and rewards redefine what counts as “fun.”</p>
+            <button class="card-cta">Read Me</button>
+          </div>
+          <div class="card">
+            <div class="card-accent accent-yellow"></div>
+            <div class="card-icon" aria-hidden="true">03</div>
+            <h4 class="card-title">The Third Space</h4>
+            <p class="card-body">Cafés, parks, and libraries foster slow, social leisure. Online, agency gives way to curation—activity without autonomy.</p>
+            <button class="card-cta">Read Me</button>
+          </div>
+        </div>
+
+        <!-- Connected narrative (condensed intro tying all sections together) -->
+        <section style="margin-top: 2rem;">
+          <h3 style="font-family: 'Bungee Shade', cursive; color: var(--warm-ink); margin-bottom: 1rem;">Leisure in the Digital Age</h3>
+          <p style="font-size: 1.05rem; line-height: 1.8; margin-bottom: 1rem;">In the past, leisure lived in quiet corners—books, parks, game nights, craft tables. It did not chase metrics or novelty. Value came from doing: creativity, reflection, skill, and social presence. Today, platforms rewrite free time as effortless, passive, frictionless consumption.</p>
+          <p style="font-size: 1.05rem; line-height: 1.8; margin-bottom: 1rem;">Recommendation engines, notifications, and infinite scroll orchestrate attention. Gamified streaks and rewards condition return. Apps promise convenience; AI removes friction. Leisure becomes optimized, entertaining, and efficient—curated by systems rather than self-directed.</p>
+          <p style="font-size: 1.05rem; line-height: 1.8;">As third spaces disappear, digital platforms offer activity without agency. We risk losing slow creativity and social intimacy, while “fun” becomes a product shaped by engagement metrics. Our projects—podcasts, mini-documentaries, museum exhibits, and platform audits—explore this shift and ask how rest can become slower, shared, and truly self-directed again.</p>
+        </section>
       </main>
 
       <!-- Campus Roadmap (ROADMAP TAB: MAP VIEW) -->
@@ -240,10 +265,6 @@ class App {
           </div>
         </div>
       </main>
-
-      <footer>
-        <p>&copy; ${new Date().getFullYear()} Leisure in the Digital Age · Digital Lives</p>
-      </footer>
     `;
 
     // Reattach header tab listeners
