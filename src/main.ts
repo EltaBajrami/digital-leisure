@@ -183,6 +183,64 @@ class App {
         ${this.keyConcepts.render()}
       </main>
 
+      <!-- Posters Slideshow (POSTERS TAB) -->
+      <main
+        class="content-section posters-main"
+        id="posters-content"
+        style="display: ${this.state.activeTab === 'posters' ? 'block' : 'none'}"
+      >
+        <h2 class="posters-title" style="font-family: 'Bungee Shade', cursive; font-size: 2.2rem; margin-bottom: 2rem; color: var(--warm-ink); text-align: left;">Search Engines</h2>
+        <div class="slideshow-container">
+          <div class="slide active">
+            <img src="src/page1.jpg" alt="Poster 1">
+          </div>
+          <div class="slide">
+            <img src="src/page 2.jpg" alt="Poster 2">
+          </div>
+          <div class="slide">
+            <img src="src/page 3.jpg" alt="Poster 3">
+          </div>
+          
+          <button class="prev-slide" aria-label="Previous slide">❮</button>
+          <button class="next-slide" aria-label="Next slide">❯</button>
+          
+          <div class="slide-dots">
+            <span class="dot active" data-slide="0"></span>
+            <span class="dot" data-slide="1"></span>
+            <span class="dot" data-slide="2"></span>
+          </div>
+        </div>
+
+        <div class="slideshow-container slideshow-container-2" style="margin-top: 3rem;">
+          <div class="slide-2 active">
+            <img src="src/YellowChat1.png" alt="Yellow Chat 1">
+          </div>
+          <div class="slide-2">
+            <img src="src/YellowChat2.png" alt="Yellow Chat 2">
+          </div>
+          <div class="slide-2">
+            <img src="src/YellowChat3.png" alt="Yellow Chat 3">
+          </div>
+          <div class="slide-2">
+            <img src="src/YellowChat4.png" alt="Yellow Chat 4">
+          </div>
+          <div class="slide-2">
+            <img src="src/YellowChat5.png" alt="Yellow Chat 5">
+          </div>
+          
+          <button class="prev-slide-2" aria-label="Previous slide">❮</button>
+          <button class="next-slide-2" aria-label="Next slide">❯</button>
+          
+          <div class="slide-dots">
+            <span class="dot-2 active" data-slide="0"></span>
+            <span class="dot-2" data-slide="1"></span>
+            <span class="dot-2" data-slide="2"></span>
+            <span class="dot-2" data-slide="3"></span>
+            <span class="dot-2" data-slide="4"></span>
+          </div>
+        </div>
+      </main>
+
       <footer>
         <p>&copy; ${new Date().getFullYear()} Leisure in the Digital Age · Digital Lives</p>
       </footer>
@@ -208,6 +266,12 @@ class App {
     this.attachConceptTooltips();
     this.attachAddConceptButton();
     this.renderCustomTerms();
+
+    // Posters tab: slideshow
+    if (this.state.activeTab === 'posters') {
+      this.attachSlideshowListeners();
+      this.attachSecondSlideshowListeners();
+    }
   }
 
   private attachExpandButton(): void {
@@ -418,6 +482,94 @@ class App {
 
     // Reattach tooltips for custom terms
     this.attachConceptTooltips();
+  }
+
+  private currentSlide = 0;
+
+  private attachSlideshowListeners(): void {
+    const slides = document.querySelectorAll<HTMLElement>('.slide');
+    const dots = document.querySelectorAll<HTMLElement>('.dot');
+    const prevBtn = document.querySelector<HTMLButtonElement>('.prev-slide');
+    const nextBtn = document.querySelector<HTMLButtonElement>('.next-slide');
+
+    const showSlide = (n: number) => {
+      if (n >= slides.length) this.currentSlide = 0;
+      if (n < 0) this.currentSlide = slides.length - 1;
+
+      slides.forEach((slide) => slide.classList.remove('active'));
+      dots.forEach((dot) => dot.classList.remove('active'));
+
+      slides[this.currentSlide].classList.add('active');
+      dots[this.currentSlide].classList.add('active');
+    };
+
+    prevBtn?.addEventListener('click', () => {
+      this.currentSlide--;
+      showSlide(this.currentSlide);
+    });
+
+    nextBtn?.addEventListener('click', () => {
+      this.currentSlide++;
+      showSlide(this.currentSlide);
+    });
+
+    dots.forEach((dot, index) => {
+      dot.addEventListener('click', () => {
+        this.currentSlide = index;
+        showSlide(this.currentSlide);
+      });
+    });
+
+    // Keyboard navigation
+    const handleKeyboard = (e: KeyboardEvent) => {
+      if (this.state.activeTab === 'posters') {
+        if (e.key === 'ArrowLeft') {
+          this.currentSlide--;
+          showSlide(this.currentSlide);
+        } else if (e.key === 'ArrowRight') {
+          this.currentSlide++;
+          showSlide(this.currentSlide);
+        }
+      }
+    };
+    document.addEventListener('keydown', handleKeyboard);
+  }
+
+  private currentSlide2 = 0;
+
+  private attachSecondSlideshowListeners(): void {
+    const slides = document.querySelectorAll<HTMLElement>('.slide-2');
+    const dots = document.querySelectorAll<HTMLElement>('.dot-2');
+    const prevBtn = document.querySelector<HTMLButtonElement>('.prev-slide-2');
+    const nextBtn = document.querySelector<HTMLButtonElement>('.next-slide-2');
+
+    const showSlide = (n: number) => {
+      if (n >= slides.length) this.currentSlide2 = 0;
+      if (n < 0) this.currentSlide2 = slides.length - 1;
+
+      slides.forEach((slide) => slide.classList.remove('active'));
+      dots.forEach((dot) => dot.classList.remove('active'));
+
+      slides[this.currentSlide2].classList.add('active');
+      dots[this.currentSlide2].classList.add('active');
+    };
+
+    prevBtn?.addEventListener('click', () => {
+      this.currentSlide2--;
+      showSlide(this.currentSlide2);
+    });
+
+    nextBtn?.addEventListener('click', () => {
+      this.currentSlide2++;
+      showSlide(this.currentSlide2);
+    });
+
+    dots.forEach((dot, index) => {
+      dot.addEventListener('click', () => {
+        this.currentSlide2 = index;
+        showSlide(this.currentSlide2);
+      });
+    });
   }
 }
 

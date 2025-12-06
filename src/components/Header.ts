@@ -31,6 +31,12 @@ export class Header {
           >
             Concepts & Keywords
           </button>
+          <button
+            class="nav-tab ${this.activeTab === 'posters' ? 'active' : ''}"
+            data-tab="posters"
+          >
+            Posters
+          </button>
         </nav>
       </header>
     `;
