@@ -237,7 +237,13 @@ class App {
 
               <!-- Door image in place of second column -->
               <div class="timeline-door">
-                <img src="src/door.png" alt="Sketch of a door" />
+                <img
+                  id="door-toggle"
+                  src="src/door.png"
+                  alt="Sketch of a door"
+                  data-closed-src="src/door.png"
+                  data-open-src="src/dooropen.png"
+                />
               </div>
             </div>
         </div>
@@ -349,6 +355,7 @@ class App {
     // Overview-specific behavior
     if (this.state.activeTab === 'about') {
       this.attachExpandButton();
+      this.attachDoorToggle();
     }
 
     // Roadmap: map or detail
@@ -386,6 +393,19 @@ class App {
           : 'rgba(255, 230, 199, 0.8)';
       });
     }
+  }
+
+  private attachDoorToggle(): void {
+    const doorImg = document.getElementById('door-toggle') as HTMLImageElement | null;
+    if (!doorImg) return;
+
+    const closedSrc = doorImg.dataset.closedSrc || doorImg.getAttribute('src') || '';
+    const openSrc = doorImg.dataset.openSrc || closedSrc;
+
+    doorImg.onclick = () => {
+      const isClosed = doorImg.getAttribute('src') === closedSrc;
+      doorImg.setAttribute('src', isClosed ? openSrc : closedSrc);
+    };
   }
 
   // Modal popup for concept definitions
