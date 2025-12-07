@@ -17,6 +17,9 @@ class App {
   private keyConcepts: KeyConcepts;
   private customTerms: Array<{ term: string; definition: string }> = [];
 
+  private currentSlide = 0;
+  private currentSlide2 = 0;
+
   constructor() {
     this.state = {
       activeTab: 'about',
@@ -61,7 +64,7 @@ class App {
           <div class="welcome-title-image">
             <img
               src="src/title-word.png"
-              alt="Exploring Digital-Age Leisure"
+              alt="Leisure in the Digital Age"
               class="welcome-title-word"
             />
           </div>
@@ -79,24 +82,42 @@ class App {
             <strong> STS-236 </strong> <em> digital lives </em> : a final project by Alexandra, Ella, & Elta
           </p>
           
-          <p style="font-size: 1.05rem; line-height: 1.8; margin-bottom: 0.75rem;">
+          <!-- main intro text from your new copy -->
+          <p style="font-size: 1.05rem; line-height: 1.8; margin-bottom: 0.5rem;">
             This site is a small guide for noticing how your free time is shaped by digital systems.
           </p>
-          <p style="font-size: 1.05rem; line-height: 1.8; margin-bottom: 1rem;">
+          <p style="font-size: 1.05rem; line-height: 1.8; margin-bottom: 0.5rem;">
             Our campus roadmap links these ideas to familiar Vassar buildings. At each stop, you’re invited to ask:
-            <span style="font-style: italic;">What does “rest” look like here? Who makes it possible? Whose time,
-            data, or labor is being organized in the background?</span> The goal isn’t to give up digital leisure,
-            but to see how it’s structured and to imagine slower, more self-directed ways of taking a break.
+          </p>
+          <p style="font-size: 1.05rem; line-height: 1.8; margin-left: 1rem; margin-bottom: 0.5rem;">
+            <span style="display:block;">What does “rest” look like here?</span>
+            <span style="display:block;">Who makes it possible?</span>
+            <span style="display:block;">Whose time, data, or labor is being organized in the background?</span>
+          </p>
+          <p style="font-size: 1.05rem; line-height: 1.8; margin-bottom: 1rem;">
+            The goal isn’t to give up digital leisure, but to see how it’s structured and to imagine slower, more
+            self-directed ways of taking a break.
+          </p>
+
+          <p
+            style="
+              font-size: 0.95rem;
+              margin-top: 0.25rem;
+              margin-bottom: 1.25rem;
+              opacity: 0.85;
+            "
+          >
           </p>
 
           <div style="margin: 1.5rem 0 0.5rem;">
             <h4 style="margin-bottom: 0.5rem;">WEBSITE FEATURES:</h4>
             <ul style="font-size: 0.98rem; line-height: 1.7; padding-left: 1.2rem; margin-bottom: 0.5rem;">
               <li><strong>CAMPUS ROADMAP:</strong> Click each building to learn more about relevant ideas!</li>
-              <li><strong>CONCEPTS & KEYWORDS:</strong> Study keywords to build your digtal literacy.</li>
+              <li><strong>CONCEPTS & KEYWORDS:</strong> Study keywords to build your digital literacy.</li>
             </ul>
           </div>
 
+          <!-- Expandable Section (your new text) -->
           <div style="margin-top: 1.5rem;">
             <button
               id="expand-shift-btn"
@@ -116,7 +137,7 @@ class App {
                 color: var(--warm-ink);
               "
             >
-              <span>How “taking a break” has changed →</span>
+              <span>How “taking a break” has changed:</span>
               <span
                 id="expand-icon"
                 style="font-size: 1.3rem; transition: transform 0.3s ease;"
@@ -135,32 +156,33 @@ class App {
               "
             >
               <p style="line-height: 1.7; margin-bottom: 0.75rem;">
-                Before digital platforms, leisure often meant <strong>active, self-chosen participation</strong>:
-                reading, crafts, games, hanging out in common rooms or cafés. There were pauses and pockets
-                of boredom. Time felt slower, and “fun” didn’t always come with notifications.
+                Before digital platforms, leisure often meant active, self-chosen participation: reading, crafts, games,
+                hanging out in common rooms or cafés. There were pauses and pockets of boredom. Time felt slower, and
+                “fun” didn’t always come with notifications.
               </p>
               <p style="line-height: 1.7; margin-bottom: 0.75rem;">
-                Now, a lot of rest runs through <strong>platforms, recommendation systems, and metrics</strong>.
-                Breaks turn into scrolling, autoplay, and personalized feeds designed to keep your attention.
-                Your “free time” is also valuable data that can be tracked, sorted, and sold.
+                Today, much of our rest is filtered through platforms, recommendation systems, and metrics. Breaks turn
+                into scrolling, autoplay, and personalized feeds designed to keep your attention. Your “free time” is
+                also valuable data that can be tracked, sorted, and sold.
               </p>
               <p style="line-height: 1.7;">
-                This project asks what is gained (and what is lost) when rest is managed by infrastructures and
-                algorithms, and where on campus you can still make time that feels slower, less "efficient",
-                and more your own.
+                This project asks what is gained (and what is lost) when rest is shaped by infrastructures and
+                algorithms, and where on campus you can still make time that feels slower, less “efficient”, and more
+                your own.
               </p>
             </div>
           </div>
 
           <!-- Info cards section: three small cards -->
-          <div class="info-cards" style="margin-top: 4rem;">
+          <div class="info-cards" style="margin-top: 3rem;">
             <div class="card">
               <div class="card-accent accent-pink"></div>
               <div class="card-icon" aria-hidden="true">01</div>
               <h4>Algorithmic Leisure</h4> <br>
               <p class="card-body">
-                Leisure becomes passive, optimized by platforms. Engagement is measured, novelty constant,
-                and rest is curated rather than chosen.
+                Leisure has shifted into something more passive, shaped by the platforms we use. Our engagement is
+                tracked, new content never stops coming, and even the way we “rest” feels curated for us rather than
+                something we choose for ourselves.
               </p>
               <button class="card-cta">Read Me</button>
             </div>
@@ -179,24 +201,46 @@ class App {
               <div class="card-icon" aria-hidden="true">03</div>
               <h4>The Third Space</h4> <br>
               <p class="card-body">
-                Cafés, parks, and libraries foster slow, social leisure. Online, agency gives way to curation—
-                activity without autonomy.
+                Cafés, parks, and libraries create space for slower, more social forms of leisure. Online, that sense
+                of agency often fades, replaced by curated experiences that leave us with less autonomy.
               </p>
               <button class="card-cta">Read Me</button>
             </div>
           </div>
-          
-          <!-- Uniform Timeline Section (AFTER INFO-CARDS) -->
-          <div class="timeline-section" style="display: ${this.state.activeTab === 'about' ? 'flex' : 'none'}; margin-top: 3rem;">
+
+          <!-- External readings (MOVED HERE INTO THE ABOUT BOX) -->
+          <section style="margin-top: 2.5rem;">
+            <h4 style="margin-bottom: 0.75rem;">External readings about leisure in the digital age:</h4>
+            <ul style="font-size: 0.95rem; line-height: 1.7; padding-left: 1.2rem;">
+              <li><em>Digital Leisure: Transformation of Leisure Activities</em> by Ömer Faruk Tutar</li>
+              <li><em>The Digitalization of Leisure and Its Social Implications</em></li>
+              <li><em>Entertainment for well-being: Why leisure will shape the future of digital in humanitarianism</em></li>
+              <li>
+                <em>Digital leisure use and psychological well-being among recreation management students:
+                The mediating role of social media engagement</em> by Kubra Asan
+              </li>
+              <li>
+                <em>Digital leisure study: The consumption experience, habits and social uses</em> by Laura Rojas de Francisco
+              </li>
+              <li><em>Digital Recreation and Artificial Leisure: A Philosophical Inquiry</em> by Rojhat Aydin</li>
+            </ul>
+          </section>
+
+          <!-- Timeline + Door layout (old formatting, emojis removed) -->
+          <div
+            class="timeline-section"
+            style="display: ${this.state.activeTab === 'about' ? 'flex' : 'none'}; margin-top: 3rem;"
+          >
             <div class="timeline-container">
               <div class="timeline-line"></div>
             
               <div class="timeline-item">
                 <div class="timeline-dot"></div>
                 <div class="timeline-badge">
-                  <span class="badge-icon">📱</span>
+                  <span class="badge-icon">&nbsp;</span>
                   <div class="badge-text">
-                    <strong>EFFORTLESS, PASSIVE CONSUMPTION</strong><br>free time redesigned for frictionless entertainment
+                    <strong>INVISIBLE SYSTEMS</strong><br>
+                    clouds, cables, algorithms, and labor sit beneath “seamless” leisure
                   </div>
                 </div>
               </div>
@@ -204,9 +248,10 @@ class App {
               <div class="timeline-item">
                 <div class="timeline-dot"></div>
                 <div class="timeline-badge">
-                  <span class="badge-icon">🔔</span>
+                  <span class="badge-icon">&nbsp;</span>
                   <div class="badge-text">
-                    <strong>PLATFORMS ARCHITECT PLEASURE</strong><br>recommendations and alerts curate desire and attention
+                    <strong>DATA AS POWER</strong><br>
+                    clicks, pauses, and emotions become extractable data and influence
                   </div>
                 </div>
               </div>
@@ -214,9 +259,10 @@ class App {
               <div class="timeline-item">
                 <div class="timeline-dot"></div>
                 <div class="timeline-badge">
-                  <span class="badge-icon">∞</span>
+                  <span class="badge-icon">&nbsp;</span>
                   <div class="badge-text">
-                    <strong>INFINITE SCROLL</strong><br>removes stopping cues; minutes become hours
+                    <strong>PRECARITY & INEQUALITY</strong><br>
+                    platform labor and code embed and scale old hierarchies
                   </div>
                 </div>
               </div>
@@ -224,9 +270,10 @@ class App {
               <div class="timeline-item">
                 <div class="timeline-dot"></div>
                 <div class="timeline-badge">
-                  <span class="badge-icon">🎮</span>
+                  <span class="badge-icon">&nbsp;</span>
                   <div class="badge-text">
-                    <strong>GAMIFIED RETURNS</strong><br>streaks and rewards condition us to come back
+                    <strong>NO NEUTRAL AI</strong><br>
+                    systems amplify existing social logics rather than objective truth
                   </div>
                 </div>
               </div>
@@ -234,15 +281,16 @@ class App {
               <div class="timeline-item">
                 <div class="timeline-dot"></div>
                 <div class="timeline-badge">
-                  <span class="badge-icon">🏛️</span>
+                  <span class="badge-icon">&nbsp;</span>
                   <div class="badge-text">
-                    <strong>RECLAIM THE THIRD SPACE</strong><br>choose slower, shared, self-directed forms of leisure
+                    <strong>SLOWING DOWN</strong><br>
+                    intentional slowness becomes a small act of resistance
                   </div>
                 </div>
               </div>
             </div>
 
-            <!-- Door image in place of second column -->
+            <!-- Door image as second column -->
             <div class="timeline-door">
               <img
                 id="door-toggle"
@@ -251,7 +299,7 @@ class App {
                 data-closed-src="src/door.png"
                 data-open-src="src/dooropen.png"
                 style="
-                  max-width: 800px;
+                  max-width: 700px;
                   width: 100%;
                   height: auto;
                   display: block;
@@ -259,6 +307,8 @@ class App {
                 "
               />
             </div>
+          </div>
+        </div>
       </main>
 
       <!-- Campus Roadmap (ROADMAP TAB: MAP VIEW) -->
@@ -393,7 +443,7 @@ class App {
     this.attachAddConceptButton();
     this.renderCustomTerms();
 
-    // Posters tab: slideshow
+    // Posters tab: slideshows
     if (this.state.activeTab === 'posters') {
       this.attachSlideshowListeners();
       this.attachSecondSlideshowListeners();
@@ -510,11 +560,7 @@ class App {
     this.state.activeTab = tabName;
 
     // when switching tabs, reset roadmap to map view
-    if (tabName === 'roadmap') {
-      this.state.currentPage = 'roadmap';
-    } else {
-      this.state.currentPage = 'roadmap';
-    }
+    this.state.currentPage = 'roadmap';
 
     // keep header in sync
     if ((this.header as any).updateActiveTab) {
@@ -623,8 +669,6 @@ class App {
     this.attachConceptTooltips();
   }
 
-  private currentSlide = 0;
-
   private attachSlideshowListeners(): void {
     const slides = document.querySelectorAll<HTMLElement>('.slide');
     const dots = document.querySelectorAll<HTMLElement>('.dot');
@@ -673,8 +717,6 @@ class App {
     };
     document.addEventListener('keydown', handleKeyboard);
   }
-
-  private currentSlide2 = 0;
 
   private attachSecondSlideshowListeners(): void {
     const slides = document.querySelectorAll<HTMLElement>('.slide-2');
