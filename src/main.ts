@@ -181,6 +181,50 @@ class App {
         </div>
       </main>
 
+      <!-- Info Cards (AFTER CONTENT-SECTION) -->
+      <div class="info-cards" style="display: ${this.state.activeTab === 'about' ? 'grid' : 'none'}; margin-top: 1.5rem;">
+        <!-- Card 01 -->
+        <div class="card">
+          <div class="card-accent accent-pink"></div>
+          <div class="card-icon" aria-hidden="true">01</div>
+          <h4 class="card-title">Leisure in the Digital Age</h4>
+          <p class="card-body">
+            Leisure once meant presence: books, parks, crafts, slow play. Today, platforms optimize “free time” into frictionless consumption—novelty, autoplay, and metrics.
+          </p>
+          <button class="card-cta">Read More</button>
+        </div>
+
+        <!-- Card 02 -->
+        <div class="card">
+          <div class="card-accent accent-blue"></div>
+          <div class="card-icon" aria-hidden="true">02</div>
+          <h4 class="card-title">From Traditional to Algorithmic</h4>
+          <p class="card-body">
+            Recommendation engines, push alerts, and infinite scroll turn rest into data-driven engagement. Convenience shifts expectations—free time must be efficient and entertaining.
+          </p>
+          <button class="card-cta">Read More</button>
+        </div>
+
+        <!-- Card 03 -->
+        <div class="card">
+          <div class="card-accent accent-yellow"></div>
+          <div class="card-icon" aria-hidden="true">03</div>
+          <h4 class="card-title">The Missing Third Space</h4>
+          <p class="card-body">
+            Cafés, libraries, and parks—the third spaces—fade as platforms curate leisure. We risk losing self-directed creativity and shared, slow forms of fulfillment.
+          </p>
+          <button class="card-cta">Read More</button>
+        </div>
+      </div>
+
+      <!-- Connected Narrative (condensed preview) -->
+      <section style="display: ${this.state.activeTab === 'about' ? 'block' : 'none'}; margin-top: 2rem;">
+        <h3 style="font-family: 'Bungee Shade', cursive; color: var(--warm-ink);">LEISURE IN THE DIGITAL AGE</h3>
+        <p style="line-height: 1.7; margin-top: 0.5rem;">
+          Platforms now architect pleasure: feeds predict desire, scroll removes stopping cues, and gamified rewards condition return. TikTok and Spotify exemplify passive consumption—quick delight, less active engagement. As immersive techs amplify stimulation, autonomy and presence erode, and third spaces disappear. This initiative responds with podcasts, a mini-doc, an online museum, and a campus app audit—asking what it means to rest and feel fulfilled when time is shaped by algorithms.
+        </p>
+      </section>
+
       <!-- Campus Roadmap (ROADMAP TAB: MAP VIEW) -->
       <div
         id="about-roadmap-content"
