@@ -178,6 +178,63 @@ class App {
               <button class="card-cta">Read Me</button>
             </div>
           </div>
+          
+            <!-- Uniform Timeline Section (AFTER INFO-CARDS) -->
+            <div class="timeline-section" style="display: ${this.state.activeTab === 'about' ? 'block' : 'none'}; margin-top: 3rem;">
+              <div class="timeline-container">
+                <div class="timeline-line"></div>
+              
+                <div class="timeline-item">
+                  <div class="timeline-dot"></div>
+                  <div class="timeline-badge">
+                    <span class="badge-icon">📱</span>
+                    <div class="badge-text">
+                      <strong>EFFORTLESS, PASSIVE CONSUMPTION</strong><br>free time redesigned for frictionless entertainment
+                    </div>
+                  </div>
+                </div>
+  
+                <div class="timeline-item">
+                  <div class="timeline-dot"></div>
+                  <div class="timeline-badge">
+                    <span class="badge-icon">🔔</span>
+                    <div class="badge-text">
+                      <strong>PLATFORMS ARCHITECT PLEASURE</strong><br>recommendations and alerts curate desire and attention
+                    </div>
+                  </div>
+                </div>
+  
+                <div class="timeline-item">
+                  <div class="timeline-dot"></div>
+                  <div class="timeline-badge">
+                    <span class="badge-icon">∞</span>
+                    <div class="badge-text">
+                      <strong>INFINITE SCROLL</strong><br>removes stopping cues; minutes become hours
+                    </div>
+                  </div>
+                </div>
+  
+                <div class="timeline-item">
+                  <div class="timeline-dot"></div>
+                  <div class="timeline-badge">
+                    <span class="badge-icon">🎮</span>
+                    <div class="badge-text">
+                      <strong>GAMIFIED RETURNS</strong><br>streaks and rewards condition us to come back
+                    </div>
+                  </div>
+                </div>
+  
+                <div class="timeline-item">
+                  <div class="timeline-dot"></div>
+                  <div class="timeline-badge">
+                    <span class="badge-icon">🏛️</span>
+                    <div class="badge-text">
+                      <strong>RECLAIM THE THIRD SPACE</strong><br>choose slower, shared, self-directed forms of leisure
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
         </div>
       </main>
 
