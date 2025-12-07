@@ -235,59 +235,9 @@ class App {
                 </div>
               </div>
 
-              <!-- Second column of timeline badges -->
-              <div class="timeline-container2">
-                <div class="timeline-line"></div>
-
-                <div class="timeline-item">
-                  <div class="timeline-dot"></div>
-                  <div class="timeline-badge">
-                    <span class="badge-icon">🧩</span>
-                    <div class="badge-text">
-                      <strong>FRAGMENTED ATTENTION</strong><br>micro-interruptions reshape how we focus and rest
-                    </div>
-                  </div>
-                </div>
-
-                <div class="timeline-item">
-                  <div class="timeline-dot"></div>
-                  <div class="timeline-badge">
-                    <span class="badge-icon">👥</span>
-                    <div class="badge-text">
-                      <strong>SOCIAL SCROLL</strong><br>connection and comparison blur into the same feed
-                    </div>
-                  </div>
-                </div>
-
-                <div class="timeline-item">
-                  <div class="timeline-dot"></div>
-                  <div class="timeline-badge">
-                    <span class="badge-icon">⏱️</span>
-                    <div class="badge-text">
-                      <strong>TIME COMPRESSION</strong><br>hours disappear into seamless, endless content streams
-                    </div>
-                  </div>
-                </div>
-
-                 <div class="timeline-item">
-                  <div class="timeline-dot"></div>
-                  <div class="timeline-badge">
-                    <span class="badge-icon">⏱️</span>
-                    <div class="badge-text">
-                      <strong>TIME COMPRESSION</strong><br>hours disappear into seamless, endless content streams
-                    </div>
-                  </div>
-                </div>
-
-                 <div class="timeline-item">
-                  <div class="timeline-dot"></div>
-                  <div class="timeline-badge">
-                    <span class="badge-icon">⏱️</span>
-                    <div class="badge-text">
-                      <strong>TIME COMPRESSION</strong><br>hours disappear into seamless, endless content streams
-                    </div>
-                  </div>
-                </div>
+              <!-- Door image in place of second column -->
+              <div class="timeline-door">
+                <img src="src/door.png" alt="Sketch of a door" />
               </div>
             </div>
         </div>
