@@ -5,7 +5,7 @@ import { BuildingDetail } from './components/BuildingDetail';
 import { KeyConcepts } from './components/KeyConcepts';
 
 interface AppState {
-  activeTab: string;   // 'about' | 'roadmap' | 'concepts'
+  activeTab: string;   // 'about' | 'roadmap' | 'concepts' | 'posters'
   currentPage: string; // 'roadmap' or building step number ("1"..."7")
 }
 
@@ -58,7 +58,14 @@ class App {
         style="display: ${this.state.activeTab === 'about' ? 'block' : 'none'}"
       >
         <div class="welcome-section">
-          <p class="welcome-title">Exploring Digital-Age Leisure!</p>
+          <div class="welcome-title-image">
+            <img
+              src="src/title-word.png"
+              alt="Exploring Digital-Age Leisure"
+              class="welcome-title-word"
+            />
+          </div>
+
           <p
             style="
               margin-top: 0.2rem;
@@ -179,76 +186,75 @@ class App {
             </div>
           </div>
           
-            <!-- Uniform Timeline Section (AFTER INFO-CARDS) -->
-            <div class="timeline-section" style="display: ${this.state.activeTab === 'about' ? 'flex' : 'none'}; margin-top: 3rem;">
-              <div class="timeline-container">
-                <div class="timeline-line"></div>
-              
-                <div class="timeline-item">
-                  <div class="timeline-dot"></div>
-                  <div class="timeline-badge">
-                    <span class="badge-icon">📱</span>
-                    <div class="badge-text">
-                      <strong>EFFORTLESS, PASSIVE CONSUMPTION</strong><br>free time redesigned for frictionless entertainment
-                    </div>
-                  </div>
-                </div>
-  
-                <div class="timeline-item">
-                  <div class="timeline-dot"></div>
-                  <div class="timeline-badge">
-                    <span class="badge-icon">🔔</span>
-                    <div class="badge-text">
-                      <strong>PLATFORMS ARCHITECT PLEASURE</strong><br>recommendations and alerts curate desire and attention
-                    </div>
-                  </div>
-                </div>
-  
-                <div class="timeline-item">
-                  <div class="timeline-dot"></div>
-                  <div class="timeline-badge">
-                    <span class="badge-icon">∞</span>
-                    <div class="badge-text">
-                      <strong>INFINITE SCROLL</strong><br>removes stopping cues; minutes become hours
-                    </div>
-                  </div>
-                </div>
-  
-                <div class="timeline-item">
-                  <div class="timeline-dot"></div>
-                  <div class="timeline-badge">
-                    <span class="badge-icon">🎮</span>
-                    <div class="badge-text">
-                      <strong>GAMIFIED RETURNS</strong><br>streaks and rewards condition us to come back
-                    </div>
-                  </div>
-                </div>
-  
-                <div class="timeline-item">
-                  <div class="timeline-dot"></div>
-                  <div class="timeline-badge">
-                    <span class="badge-icon">🏛️</span>
-                    <div class="badge-text">
-                      <strong>RECLAIM THE THIRD SPACE</strong><br>choose slower, shared, self-directed forms of leisure
-                    </div>
+          <!-- Uniform Timeline Section (AFTER INFO-CARDS) -->
+          <div class="timeline-section" style="display: ${this.state.activeTab === 'about' ? 'flex' : 'none'}; margin-top: 3rem;">
+            <div class="timeline-container">
+              <div class="timeline-line"></div>
+            
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-badge">
+                  <span class="badge-icon">📱</span>
+                  <div class="badge-text">
+                    <strong>EFFORTLESS, PASSIVE CONSUMPTION</strong><br>free time redesigned for frictionless entertainment
                   </div>
                 </div>
               </div>
 
-              <!-- Door image in place of second column -->
-              <div class="timeline-door">
-                <img
-                  id="door-toggle"
-                  src="src/door.png"
-                  alt="Sketch of a door"
-                  data-closed-src="src/door.png"
-                  data-open-src="src/dooropen.png"
-                />
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-badge">
+                  <span class="badge-icon">🔔</span>
+                  <div class="badge-text">
+                    <strong>PLATFORMS ARCHITECT PLEASURE</strong><br>recommendations and alerts curate desire and attention
+                  </div>
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-badge">
+                  <span class="badge-icon">∞</span>
+                  <div class="badge-text">
+                    <strong>INFINITE SCROLL</strong><br>removes stopping cues; minutes become hours
+                  </div>
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-badge">
+                  <span class="badge-icon">🎮</span>
+                  <div class="badge-text">
+                    <strong>GAMIFIED RETURNS</strong><br>streaks and rewards condition us to come back
+                  </div>
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-badge">
+                  <span class="badge-icon">🏛️</span>
+                  <div class="badge-text">
+                    <strong>RECLAIM THE THIRD SPACE</strong><br>choose slower, shared, self-directed forms of leisure
+                  </div>
+                </div>
               </div>
             </div>
+
+            <!-- Door image in place of second column -->
+            <div class="timeline-door">
+              <img
+                id="door-toggle"
+                src="src/door.png"
+                alt="Sketch of a door"
+                data-closed-src="src/door.png"
+                data-open-src="src/dooropen.png"
+              />
+            </div>
+          </div>
         </div>
       </main>
-
 
       <!-- Campus Roadmap (ROADMAP TAB: MAP VIEW) -->
       <div
@@ -292,7 +298,18 @@ class App {
         id="posters-content"
         style="display: ${this.state.activeTab === 'posters' ? 'block' : 'none'}"
       >
-        <h2 class="posters-title" style="font-family: 'Bungee Shade', cursive; font-size: 2.2rem; margin-bottom: 2rem; color: var(--warm-ink); text-align: left;">Search Engines</h2>
+        <div
+          class="posters-title-image"
+          style="margin-bottom: 2rem; text-align: left;"
+        >
+          <img
+            src="src/posters-word.png"
+            alt="Posters"
+            class="posters-title-word"
+            style="max-width: 650px; width: 100%; height: auto; display: block;"
+          />
+        </div>
+
         <div class="slideshow-container">
           <div class="slide active">
             <img src="src/page1.jpg" alt="Poster 1">

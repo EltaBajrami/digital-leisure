@@ -2,7 +2,14 @@ export class KeyConcepts {
   public render(): string {
     return `
       <section>
-        <h2 class="key-concepts-title">Concepts & Keywords</h2>
+        <div class="key-concepts-title-image">
+          <img
+            src="src/conceptskeywords-word.png"
+            alt="Concepts & Keywords"
+            class="key-concepts-title-word"
+          />
+        </div>
+
         <p style="max-width: 750px; margin-bottom: 1.5rem; font-size: 0.98rem; line-height: 1.7;">
           This glossary collects ideas from <em>Digital Lives</em> that sit behind the campus map.
           Click a bubble to see our definition.
