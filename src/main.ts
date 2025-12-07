@@ -144,6 +144,40 @@ class App {
               </p>
             </div>
           </div>
+
+          <!-- Info cards section: three small cards -->
+          <div class="info-cards" style="margin-top: 4rem;">
+            <div class="card">
+              <div class="card-accent accent-pink"></div>
+              <div class="card-icon" aria-hidden="true">01</div>
+              <h4>Algorithmic Leisure</h4> <br>
+              <p class="card-body">
+                Leisure becomes passive, optimized by platforms. Engagement is measured, novelty constant,
+                and rest is curated rather than chosen.
+              </p>
+              <button class="card-cta">Read Me</button>
+            </div>
+            <div class="card">
+              <div class="card-accent accent-blue"></div>
+              <div class="card-icon" aria-hidden="true">02</div>
+              <h4>Engagement Systems</h4> <br>
+              <p class="card-body">
+                Recommendations, notifications, and infinite scroll shape attention. Gamified streaks and rewards
+                redefine what counts as “fun.”
+              </p>
+              <button class="card-cta">Read Me</button>
+            </div>
+            <div class="card">
+              <div class="card-accent accent-yellow"></div>
+              <div class="card-icon" aria-hidden="true">03</div>
+              <h4>The Third Space</h4> <br>
+              <p class="card-body">
+                Cafés, parks, and libraries foster slow, social leisure. Online, agency gives way to curation—
+                activity without autonomy.
+              </p>
+              <button class="card-cta">Read Me</button>
+            </div>
+          </div>
         </div>
       </main>
 
