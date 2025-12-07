@@ -1303,13 +1303,13 @@ footer {
 .timeline-container {
   position: relative;
   max-width: 800px;
-  margin: 0 auto;
+  margin: 10 auto;
   padding: 2rem 0;
 }
 
 .timeline-line {
   position: absolute;
-  left: 80px;
+  left: 78px;
   top: 0;
   bottom: 0;
   width: 6px;
