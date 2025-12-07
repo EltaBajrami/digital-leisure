@@ -180,7 +180,7 @@ class App {
           </div>
           
             <!-- Uniform Timeline Section (AFTER INFO-CARDS) -->
-            <div class="timeline-section" style="display: ${this.state.activeTab === 'about' ? 'block' : 'none'}; margin-top: 3rem;">
+            <div class="timeline-section" style="display: ${this.state.activeTab === 'about' ? 'flex' : 'none'}; margin-top: 3rem;">
               <div class="timeline-container">
                 <div class="timeline-line"></div>
               
@@ -230,6 +230,61 @@ class App {
                     <span class="badge-icon">🏛️</span>
                     <div class="badge-text">
                       <strong>RECLAIM THE THIRD SPACE</strong><br>choose slower, shared, self-directed forms of leisure
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Second column of timeline badges -->
+              <div class="timeline-container2">
+                <div class="timeline-line"></div>
+
+                <div class="timeline-item">
+                  <div class="timeline-dot"></div>
+                  <div class="timeline-badge">
+                    <span class="badge-icon">🧩</span>
+                    <div class="badge-text">
+                      <strong>FRAGMENTED ATTENTION</strong><br>micro-interruptions reshape how we focus and rest
+                    </div>
+                  </div>
+                </div>
+
+                <div class="timeline-item">
+                  <div class="timeline-dot"></div>
+                  <div class="timeline-badge">
+                    <span class="badge-icon">👥</span>
+                    <div class="badge-text">
+                      <strong>SOCIAL SCROLL</strong><br>connection and comparison blur into the same feed
+                    </div>
+                  </div>
+                </div>
+
+                <div class="timeline-item">
+                  <div class="timeline-dot"></div>
+                  <div class="timeline-badge">
+                    <span class="badge-icon">⏱️</span>
+                    <div class="badge-text">
+                      <strong>TIME COMPRESSION</strong><br>hours disappear into seamless, endless content streams
+                    </div>
+                  </div>
+                </div>
+
+                 <div class="timeline-item">
+                  <div class="timeline-dot"></div>
+                  <div class="timeline-badge">
+                    <span class="badge-icon">⏱️</span>
+                    <div class="badge-text">
+                      <strong>TIME COMPRESSION</strong><br>hours disappear into seamless, endless content streams
+                    </div>
+                  </div>
+                </div>
+
+                 <div class="timeline-item">
+                  <div class="timeline-dot"></div>
+                  <div class="timeline-badge">
+                    <span class="badge-icon">⏱️</span>
+                    <div class="badge-text">
+                      <strong>TIME COMPRESSION</strong><br>hours disappear into seamless, endless content streams
                     </div>
                   </div>
                 </div>
