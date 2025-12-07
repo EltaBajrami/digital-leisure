@@ -250,11 +250,16 @@ class App {
                 alt="Sketch of a door"
                 data-closed-src="src/door.png"
                 data-open-src="src/dooropen.png"
+                style="
+                  max-width: 800px;
+                  width: 100%;
+                  height: auto;
+                  display: block;
+                  margin: 0 auto;
+                "
               />
             </div>
-          </div>
-        </div>
-      </main>
+
 
       <!-- Campus Roadmap (ROADMAP TAB: MAP VIEW) -->
       <div
