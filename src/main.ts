@@ -259,7 +259,7 @@ class App {
                 "
               />
             </div>
-
+      </main>
 
       <!-- Campus Roadmap (ROADMAP TAB: MAP VIEW) -->
       <div
