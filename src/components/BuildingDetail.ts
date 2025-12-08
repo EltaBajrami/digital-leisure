@@ -24,7 +24,7 @@ export class BuildingDetail {
           'Janet Abbate – Inventing the Internet (infrastructure)',
           'Graham Pickren – “The Global Assemblage of Digital Flow”',
         ],
-        image: '/src/main.png',
+        image: '/main.png',
         video: 'https://www.youtube.com/embed/b-r6q7ie_yA', // TODO: replace
       },
     ],
@@ -42,7 +42,7 @@ export class BuildingDetail {
           'Tarleton Gillespie – “The Relevance of Algorithms”',
           'Nissenbaum – “How Computer Systems Embody Values”',
         ],
-        image: '/src/library.png',
+        image: '/library.png',
         video: 'https://www.youtube.com/embed/juVXUPTCa00', // TODO: replace
       },
     ],
@@ -60,7 +60,7 @@ export class BuildingDetail {
           'Couldry & Mejias – “Data Colonialism”',
           'Bender et al. – “On the Dangers of Stochastic Parrots”',
         ],
-        image: '/src/olmsted.png',
+        image: '/olmsted.png',
         video: 'https://www.youtube.com/embed/ArI6albrkuY', // TODO: replace
       },
     ],
@@ -78,7 +78,7 @@ export class BuildingDetail {
           'Muldoon et al. – “A Typology of AI Data Work”',
           'Srnicek – Platform Capitalism (Chapter 2)',
         ],
-        image: '/src/deece.png',
+        image: '/deece.png',
         video: 'https://www.youtube.com/embed/nsSEsAZhl8Q', // TODO: replace
       },
     ],
@@ -96,7 +96,7 @@ export class BuildingDetail {
           'Ray Oldenburg – Third Places',
           'Tsing’s nonscalable life vs optimized platforms',
         ],
-        image: '/src/sunsetlake.png',
+        image: '/sunsetlake.png',
         video: 'https://www.youtube.com/embed/1PP7Sv-2yFs', // TODO: replace
       },
     ],
@@ -114,7 +114,7 @@ export class BuildingDetail {
           'Couldry & Mejias – Data Colonialism and extraction',
           'Srnicek – Platform logics applied to the body',
         ],
-        image: '/src/afc.png',
+        image: '/afc.png',
         video: 'https://www.youtube.com/embed/5wfnF5y1aeA', // TODO: replace
       },
     ],
@@ -132,7 +132,7 @@ export class BuildingDetail {
           'Safiya Noble – search, race, and visibility',
           'Gillespie – Platforms and the politics of visibility',
         ],
-        image: '/src/vogelstein.png',
+        image: '/vogelstein.png',
         video: 'https://www.youtube.com/embed/uA70ZGCC1f4', // TODO: replace
       },
     ],
