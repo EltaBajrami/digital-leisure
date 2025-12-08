@@ -181,7 +181,7 @@ export class RoadMap {
                 </p>
               </div>
             </div>
-          </section>s
+          </section>
 
           <!-- Step 7: Vogelstein -->
           <section class="roadmap-step">

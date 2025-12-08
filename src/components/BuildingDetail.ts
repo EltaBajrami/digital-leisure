@@ -27,7 +27,7 @@ export class BuildingDetail {
           'Graham Pickren – “The Global Assemblage of Digital Flow”',
         ],
         image: '/main.png',
-        video: 'https://www.youtube.com/embed/b-r6q7ie_yA', // TODO: replace
+        video: 'https://www.youtube.com/embed/b-r6q7ie_yA',
       },
     ],
     [
@@ -46,7 +46,7 @@ export class BuildingDetail {
           'Nissenbaum – “How Computer Systems Embody Values”',
         ],
         image: '/library.png',
-        video: 'https://www.youtube.com/embed/juVXUPTCa00', // TODO: replace
+        video: 'https://www.youtube.com/embed/juVXUPTCa00',
       },
     ],
     [
@@ -65,7 +65,7 @@ export class BuildingDetail {
           'Bender et al. – “On the Dangers of Stochastic Parrots”',
         ],
         image: '/olmsted.png',
-        video: 'https://www.youtube.com/embed/ArI6albrkuY', // TODO: replace
+        video: 'https://www.youtube.com/embed/ArI6albrkuY',
       },
     ],
     [
@@ -84,7 +84,7 @@ export class BuildingDetail {
           'Srnicek – Platform Capitalism (Chapter 2)',
         ],
         image: '/deece.png',
-        video: 'https://www.youtube.com/embed/nsSEsAZhl8Q', // TODO: replace
+        video: 'https://www.youtube.com/embed/nsSEsAZhl8Q',
       },
     ],
     [
@@ -103,7 +103,7 @@ export class BuildingDetail {
           'Tsing’s nonscalable life vs optimized platforms',
         ],
         image: '/sunsetlake.png',
-        video: 'https://www.youtube.com/embed/1PP7Sv-2yFs', // TODO: replace
+        video: 'https://www.youtube.com/embed/1PP7Sv-2yFs',
       },
     ],
     [
@@ -122,7 +122,7 @@ export class BuildingDetail {
           'Srnicek – Platform logics applied to the body',
         ],
         image: '/afc.png',
-        video: 'https://www.youtube.com/embed/5wfnF5y1aeA', // TODO: replace
+        video: 'https://www.youtube.com/embed/5wfnF5y1aeA',
       },
     ],
     [
@@ -141,10 +141,20 @@ export class BuildingDetail {
           'Gillespie – Platforms and the politics of visibility',
         ],
         image: '/vogelstein.png',
-        video: 'https://www.youtube.com/embed/uA70ZGCC1f4', // TODO: replace
+        video: 'https://www.youtube.com/embed/uA70ZGCC1f4',
       },
     ],
   ]);
+
+  private videoText: Record<string, string> = {
+    '1': 'This video looks at how digital platforms shape the way people connect, and how being constantly “online” doesn’t always lead to feeling present or close to others. It reflects on the gap between connection, attention, and real social experience in everyday life.',
+    '2': 'This video argues that reading trains patience and focus in a world built around constant digital stimulation. It describes reading as a form of resistance against the constant urge to check phones and apps.',
+    '3': 'This video explains how technology is racing ahead faster than education can keep up, creating gaps in knowledge and power. It warns that when only a few people understand how digital systems work, inequality grows and the rest of society is left behind.',
+    '4': 'This video shows how the digital world has woven itself into the way we buy and think about food, from delivery apps to online groceries. It explains how constant nudges and deals can change what we eat, who we eat with, and how money and connection flow through a neighborhood.',
+    '5': 'This video reflects on how modern life has pulled many people away from a felt connection to the land and their own bodies. It suggests that slowing down, breathing, and paying attention to bodily experience are ways of re-grounding ourselves in nature and rebuilding a sense of belonging.',
+    '6': 'This video explains how many digital systems are designed to pull our attention through tracking, clicks, and constant feedback. It suggests that quick hits of satisfaction from data don’t lead to long-term well-being, and that meaning comes from choosing how we engage rather than being driven by numbers.',
+    '7': 'This video shows how AI is becoming part of the creative process, blurring the line between human imagination and machine generation. It raises questions about originality, authorship, and what it means to create when images are produced from massive existing data sets. It suggests that making art today is not just aesthetic, but also ethical and political.',
+  };
 
   public render(step: string): string {
     const building = this.buildingData.get(step);
@@ -174,6 +184,9 @@ export class BuildingDetail {
               style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
             ></iframe>
           </div>
+          <p style="margin-top: 0.75rem; font-size: 0.95rem; line-height: 1.6;">
+            ${this.videoText[step] || ''}
+          </p>
         </div>
       `
       : '';

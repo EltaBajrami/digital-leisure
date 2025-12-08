@@ -285,9 +285,8 @@ Bundled, Buried & Behind Closed Doors </a> documentary
               <div class="card-accent accent-pink"></div>
               <div class="card-icon" aria-hidden="true">What is Leisure</div>
               <p class="card-body">
-                "It should also be noted that not only an opportunity to choose to do something in free time 
-                makes that chosen activity leisure but also a choice not to do something is an expression of freedom..."
-              </p>
+                "... In other words, a sense of freedom more than anything else defines what leisure is to people."
+                </p>
               <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10011693/" target="_blank" rel="noopener noreferrer"><button class="card-cta">Read More</button></a>
             </div>
             <div class="card">
@@ -303,8 +302,7 @@ Bundled, Buried & Behind Closed Doors </a> documentary
               <div class="card-accent accent-yellow"></div>
               <div class="card-icon" aria-hidden="true">The Third Space</div>
               <p class="card-body">
-                "First Space is the space we live in, our comfortable surroundings. The Second Space is the space that, 
-                outside of our home, we spend most of our time, usually the place of work. Then there’s Third Space."
+                "These small steps help me reconnect with the world around me, fostering vital social connections that technology can never replace"
               </p>
               <a href="https://medium.com/@caine_chan/rediscovering-connection-the-importance-of-third-spaces-in-a-digital-world-75f5167c358f" target="_blank" rel="noopener noreferrer"><button class="card-cta">Read More</button></a>
             </div>
@@ -431,9 +429,11 @@ Bundled, Buried & Behind Closed Doors </a> documentary
       opacity: 0.85;
       letter-spacing: 0.02em;
     "
-  >
-    Want to see more work from our peers in STS-236 Digital Lives? Check out these posters made by Sophia and JD!:
-  </p>
+  <p>
+  Want to see more work from our peers in STS-236 Digital Lives?<br>
+  Check out these posters made by Sophia and JD!
+</p>
+
 
 
         <div class="slideshow-container">
