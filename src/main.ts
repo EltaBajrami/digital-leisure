@@ -431,7 +431,7 @@ Bundled, Buried & Behind Closed Doors </a> documentary
     "
   <p>
   Want to see more work from our peers in STS-236 Digital Lives?<br>
-  Check out these posters made by Sophia and JD!
+  Check out these posters made by Sofia and JD!
 </p>
 
 
