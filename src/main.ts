@@ -658,8 +658,8 @@ Bundled, Buried & Behind Closed Doors </a> documentary
     this.state.currentPage = 'roadmap';
 
     // keep header in sync
-    if ((this.header as any).updateActiveTab) {
-      (this.header as any).updateActiveTab(tabName);
+    if ('updateActiveTab' in this.header && typeof (this.header as { updateActiveTab?: (tab: string) => void }).updateActiveTab === 'function') {
+      (this.header as { updateActiveTab: (tab: string) => void }).updateActiveTab(tabName);
     }
 
     this.render(document.querySelector<HTMLDivElement>('#app')!);
