@@ -253,23 +253,31 @@ class App {
                   display: block;
                   margin: 0 auto;
                 "
-              />
-              
+              /> 
             </div>
           </div>
-          <p style="
+
+            <p style="
+                padding: 0.25rem 0.7rem;
+                border-radius: 999px;
+                background: rgba(255, 230, 199, 0.95);
+                border: 1px solid rgba(154, 81, 37, 0.6);
+                font-size: 0.7rem;
+                font-family: 'Monospace', monospace;
+                letter-spacing: 0.06em;
+                text-transform: lowercase;
+                color: var(--warm-ink);
+                box-shadow: 0 2px 4px rgba(0,0,0,0.15);
                 text-align: center;
                 margin-top: 0.1rem;
-                margin-left: 43rem;
+                margin-left: 45rem;
                 margin-right: 3rem;
-                font-size: 0.95rem;
-                font-style: italic;
-                opacity: 0.85;
-                letter-spacing: 0.02em;
+                display: inline-block;
               ">
-                Click to watch a video snippet from Bundled, Buried & Behind Closed Doors Documentary
+                Click on the door to watch a video snippet from <a href="https://www.youtube.com/watch?v=BFvVWWp14d4" target="_blank" rel="noopener noreferrer" style="color: var(--warm-ink); ">
+Bundled, Buried & Behind Closed Doors </a> documentary
               </p>
-         
+
 
           <!-- Info cards section: three small cards -->
           <div class="info-cards" style="margin-top: 3rem;">
