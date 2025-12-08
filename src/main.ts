@@ -63,7 +63,7 @@ class App {
         <div class="welcome-section">
           <div class="welcome-title-image">
             <img
-              src="src/title-word.png"
+              src="/title-word.png"
               alt="Leisure in the Digital Age"
               class="welcome-title-word"
             />
@@ -242,10 +242,10 @@ class App {
             <div class="timeline-door">
               <img
                 id="door-toggle"
-                src="src/door.png"
+                src="/door.png"
                 alt="Sketch of a door"
-                data-closed-src="src/door.png"
-                data-open-src="src/1.gif"
+                data-closed-src="/door.png"
+                data-open-src="/1.gif"
                 style="
                   max-width: 700px;
                   width: 100%;
@@ -416,7 +416,7 @@ Bundled, Buried & Behind Closed Doors </a> documentary
           style="margin-bottom: 2rem; text-align: left;"
         >
           <img
-            src="src/posters-word.png"
+            src="/posters-word.png"
             alt="Posters"
             class="posters-title-word"
             style="max-width: 650px; width: 100%; height: auto; display: block;"
@@ -438,13 +438,13 @@ Bundled, Buried & Behind Closed Doors </a> documentary
 
         <div class="slideshow-container">
           <div class="slide active">
-            <img src="src/page1.jpg" alt="Poster 1">
+            <img src="/page1.jpg" alt="Poster 1">
           </div>
           <div class="slide">
-            <img src="src/page 2.jpg" alt="Poster 2">
+            <img src="/page 2.jpg" alt="Poster 2">
           </div>
           <div class="slide">
-            <img src="src/page 3.jpg" alt="Poster 3">
+            <img src="/page 3.jpg" alt="Poster 3">
           </div>
           
           <button class="prev-slide" aria-label="Previous slide">❮</button>
@@ -459,19 +459,19 @@ Bundled, Buried & Behind Closed Doors </a> documentary
 
         <div class="slideshow-container slideshow-container-2" style="margin-top: 3rem;">
           <div class="slide-2 active">
-            <img src="src/YellowChat1.png" alt="Yellow Chat 1">
+            <img src="/YellowChat1.png" alt="Yellow Chat 1">
           </div>
           <div class="slide-2">
-            <img src="src/YellowChat2.png" alt="Yellow Chat 2">
+            <img src="/YellowChat2.png" alt="Yellow Chat 2">
           </div>
           <div class="slide-2">
-            <img src="src/YellowChat3.png" alt="Yellow Chat 3">
+            <img src="/YellowChat3.png" alt="Yellow Chat 3">
           </div>
           <div class="slide-2">
-            <img src="src/YellowChat4.png" alt="Yellow Chat 4">
+            <img src="/YellowChat4.png" alt="Yellow Chat 4">
           </div>
           <div class="slide-2">
-            <img src="src/YellowChat5.png" alt="Yellow Chat 5">
+            <img src="/YellowChat5.png" alt="Yellow Chat 5">
           </div>
           
           <button class="prev-slide-2" aria-label="Previous slide">❮</button>

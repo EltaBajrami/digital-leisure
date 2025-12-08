@@ -12,7 +12,7 @@ export class RoadMap {
       <div class="roadmap-container">
         <div class="roadmap-header-image">
           <img
-            src="/src/campusroadmap-word.png"
+            src="/campusroadmap-word.png"
             alt="Campus RoadMap"
             class="roadmap-header-word"
           />
@@ -30,7 +30,7 @@ export class RoadMap {
               <div class="roadmap-item">
                 <div class="roadmap-title-image">
                   <img
-                    src="/src/main-word.png"
+                    src="/main-word.png"
                     alt="Main"
                     class="roadmap-title-word"
                   />
@@ -38,7 +38,7 @@ export class RoadMap {
               </div>
               <div class="roadmap-building">
                 <img
-                  src="/src/main.png"
+                  src="/main.png"
                   alt="Main Building"
                   class="building-image clickable-image"
                   data-step="1"
@@ -56,7 +56,7 @@ export class RoadMap {
               <div class="roadmap-item">
                 <div class="roadmap-title-image">
                   <img
-                    src="/src/library-word.png"
+                    src="/library-word.png"
                     alt="Library — Reading for Pleasure"
                     class="roadmap-title-word"
                   />
@@ -64,7 +64,7 @@ export class RoadMap {
               </div>
               <div class="roadmap-building">
                 <img
-                  src="/src/library.png"
+                  src="/library.png"
                   alt="Vassar Library"
                   class="building-image clickable-image"
                   data-step="2"
@@ -82,7 +82,7 @@ export class RoadMap {
               <div class="roadmap-item">
                 <div class="roadmap-title-image">
                   <img
-                    src="/src/olmsted-word.png"
+                    src="/olmsted-word.png"
                     alt="Olmsted — Critique vs Habit"
                     class="roadmap-title-word"
                   />
@@ -91,7 +91,7 @@ export class RoadMap {
               </div>
               <div class="roadmap-building">
                 <img
-                  src="/src/olmsted.png"
+                  src="/olmsted.png"
                   alt="Olmsted Hall"
                   class="building-image clickable-image"
                   data-step="3"
@@ -109,7 +109,7 @@ export class RoadMap {
               <div class="roadmap-item">
                 <div class="roadmap-title-image">
                   <img
-                    src="/src/deece-word.png"
+                    src="/deece-word.png"
                     alt="Deece — Convenience & Labor"
                     class="roadmap-title-word"
                   />
@@ -117,7 +117,7 @@ export class RoadMap {
               </div>
               <div class="roadmap-building">
                 <img
-                  src="/src/deece.png"
+                  src="/deece.png"
                   alt="The Deece"
                   class="building-image clickable-image"
                   data-step="4"
@@ -135,7 +135,7 @@ export class RoadMap {
               <div class="roadmap-item">
                 <div class="roadmap-title-image">
                   <img
-                    src="/src/sunsetlake-word.png"
+                    src="/sunsetlake-word.png"
                     alt="Sunset Lake — Third Space & Unstructured Time"
                     class="roadmap-title-word"
                   />
@@ -144,7 +144,7 @@ export class RoadMap {
               </div>
               <div class="roadmap-building">
                 <img
-                  src="/src/sunsetlake.png"
+                  src="/sunsetlake.png"
                   alt="Sunset Lake"
                   class="building-image clickable-image"
                   data-step="5"
@@ -162,7 +162,7 @@ export class RoadMap {
               <div class="roadmap-item">
                 <div class="roadmap-title-image">
                   <img
-                    src="/src/afc-word.png"
+                    src="/afc-word.png"
                     alt="AFC — Movement & Metrics"
                     class="roadmap-title-word"
                   />
@@ -171,7 +171,7 @@ export class RoadMap {
               </div>
               <div class="roadmap-building">
                 <img
-                  src="/src/afc.png"
+                  src="/afc.png"
                   alt="AFC"
                   class="building-image clickable-image"
                   data-step="6"
@@ -189,7 +189,7 @@ export class RoadMap {
               <div class="roadmap-item">
                 <div class="roadmap-title-image">
                   <img
-                    src="/src/vogelstein-word.png"
+                    src="/vogelstein-word.png"
                     alt="Vogelstein — Creativity & Being Seen"
                     class="roadmap-title-word"
                   />
@@ -198,7 +198,7 @@ export class RoadMap {
               </div>
               <div class="roadmap-building">
                 <img
-                  src="/src/vogelstein.png"
+                  src="/vogelstein.png"
                   alt="Vogelstein"
                   class="building-image clickable-image"
                   data-step="7"

@@ -4,7 +4,7 @@ export class KeyConcepts {
       <section>
         <div class="key-concepts-title-image">
           <img
-            src="src/conceptskeywords-word.png"
+            src="/conceptskeywords-word.png"
             alt="Concepts & Keywords"
             class="key-concepts-title-word"
           />
