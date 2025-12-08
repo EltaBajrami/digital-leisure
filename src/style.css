@@ -385,6 +385,12 @@ h4 {
   margin-bottom: 1rem;
 }
 
+#door-toggle.gif-open {
+  max-width: 420px!important;
+  margin-top: 57px!important;
+  margin-left: 120px!important;
+}
+
 /* vertical path with dots = map vibe */
 .roadmap-timeline {
   position: relative;
@@ -1425,4 +1431,19 @@ section a:visited {
 
 section a:hover {
   color: var(--hover-accent);
+}
+
+/* Lock door toggle image to consistent dimensions */
+#door-toggle {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  object-fit: contain;
+}
+
+/* Scale GIF to half size */
+#door-toggle.gif-open {
+  max-width: 300px;
 }

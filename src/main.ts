@@ -245,7 +245,7 @@ class App {
                 src="src/door.png"
                 alt="Sketch of a door"
                 data-closed-src="src/door.png"
-                data-open-src="src/dooropen.png"
+                data-open-src="src/1.gif"
                 style="
                   max-width: 700px;
                   width: 100%;
@@ -254,9 +254,21 @@ class App {
                   margin: 0 auto;
                 "
               />
+              
             </div>
           </div>
-
+          <p style="
+                text-align: center;
+                margin-top: 0.1rem;
+                margin-left: 43rem;
+                margin-right: 3rem;
+                font-size: 0.95rem;
+                font-style: italic;
+                opacity: 0.85;
+                letter-spacing: 0.02em;
+              ">
+                Click to watch a video snippet from Bundled, Buried & Behind Closed Doors Documentary
+              </p>
          
 
           <!-- Info cards section: three small cards -->
@@ -544,8 +556,14 @@ class App {
     const openSrc = doorImg.dataset.openSrc || closedSrc;
 
     doorImg.onclick = () => {
-      const isClosed = doorImg.getAttribute('src') === closedSrc;
-      doorImg.setAttribute('src', isClosed ? openSrc : closedSrc);
+      const currentSrc = doorImg.getAttribute('src');
+      if (currentSrc === closedSrc) {
+        doorImg.setAttribute('src', openSrc);
+        doorImg.classList.add('gif-open');
+      } else {
+        doorImg.setAttribute('src', closedSrc);
+        doorImg.classList.remove('gif-open');
+      }
     };
   }
 
