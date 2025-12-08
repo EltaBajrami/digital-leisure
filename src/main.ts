@@ -118,7 +118,8 @@ class App {
               </ul>
           </div>
 
-          <!-- Expandable Section (your new text) -->
+
+         <!-- Expandable Section (your new text) -->
           <div style="margin-top: 1.5rem;">
             <button
               id="expand-shift-btn"
@@ -173,63 +174,10 @@ class App {
             </div>
           </div>
 
-          <!-- Info cards section: three small cards -->
-          <div class="info-cards" style="margin-top: 3rem;">
-            <div class="card">
-              <div class="card-accent accent-pink"></div>
-              <div class="card-icon" aria-hidden="true">01</div>
-              <h4>Algorithmic Leisure</h4> <br>
-              <p class="card-body">
-                Leisure has shifted into something more passive, shaped by the platforms we use. Our engagement is
-                tracked, new content never stops coming, and even the way we “rest” feels curated for us rather than
-                something we choose for ourselves.
-              </p>
-              <button class="card-cta">Read Me</button>
-            </div>
-            <div class="card">
-              <div class="card-accent accent-blue"></div>
-              <div class="card-icon" aria-hidden="true">02</div>
-              <h4>Engagement Systems</h4> <br>
-              <p class="card-body">
-                Recommendations, notifications, and infinite scroll shape attention. Gamified streaks and rewards
-                redefine what counts as “fun.”
-              </p>
-              <button class="card-cta">Read Me</button>
-            </div>
-            <div class="card">
-              <div class="card-accent accent-yellow"></div>
-              <div class="card-icon" aria-hidden="true">03</div>
-              <h4>The Third Space</h4> <br>
-              <p class="card-body">
-                Cafés, parks, and libraries create space for slower, more social forms of leisure. Online, that sense
-                of agency often fades, replaced by curated experiences that leave us with less autonomy.
-              </p>
-              <button class="card-cta">Read Me</button>
-            </div>
-          </div>
-
-          <!-- External readings (MOVED HERE INTO THE ABOUT BOX) -->
-          <section style="margin-top: 2.5rem;">
-            <h4 style="margin-bottom: 0.75rem;">External readings about leisure in the digital age:</h4>
-            <ul style="font-size: 0.95rem; line-height: 1.7; padding-left: 1.2rem;">
-              <li><em>Digital Leisure: Transformation of Leisure Activities</em> by Ömer Faruk Tutar</li>
-              <li><em>The Digitalization of Leisure and Its Social Implications</em></li>
-              <li><em>Entertainment for well-being: Why leisure will shape the future of digital in humanitarianism</em></li>
-              <li>
-                <em>Digital leisure use and psychological well-being among recreation management students:
-                The mediating role of social media engagement</em> by Kubra Asan
-              </li>
-              <li>
-                <em>Digital leisure study: The consumption experience, habits and social uses</em> by Laura Rojas de Francisco
-              </li>
-              <li><em>Digital Recreation and Artificial Leisure: A Philosophical Inquiry</em> by Rojhat Aydin</li>
-            </ul>
-          </section>
-
-          <!-- Timeline + Door layout (old formatting, emojis removed) -->
+          <!-- Timeline + Door layout (immediately after features) -->
           <div
             class="timeline-section"
-            style="display: ${this.state.activeTab === 'about' ? 'flex' : 'none'}; margin-top: 3rem;"
+            style="display: ${this.state.activeTab === 'about' ? 'flex' : 'none'}; margin-top: 2rem;"
           >
             <div class="timeline-container">
               <div class="timeline-line"></div>
@@ -240,7 +188,7 @@ class App {
                   <span class="badge-icon">&nbsp;</span>
                   <div class="badge-text">
                     <strong>INVISIBLE SYSTEMS</strong><br>
-                    clouds, cables, algorithms, and labor sit beneath “seamless” leisure
+                    clouds, cables, algorithms, and labor sit beneath "seamless" leisure
                   </div>
                 </div>
               </div>
@@ -306,6 +254,96 @@ class App {
                   margin: 0 auto;
                 "
               />
+            </div>
+          </div>
+
+         
+
+          <!-- Info cards section: three small cards -->
+          <div class="info-cards" style="margin-top: 3rem;">
+            <div class="card">
+              <div class="card-accent accent-pink"></div>
+              <div class="card-icon" aria-hidden="true">What is Leisure</div>
+              <p class="card-body">
+                "It should also be noted that not only an opportunity to choose to do something in free time 
+                makes that chosen activity leisure but also a choice not to do something is an expression of freedom..."
+              </p>
+              <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10011693/" target="_blank" rel="noopener noreferrer"><button class="card-cta">Read More</button></a>
+            </div>
+            <div class="card">
+              <div class="card-accent accent-blue"></div>
+              <div class="card-icon" aria-hidden="true">Algorithmic Anxiety</div>
+              <p class="card-body">
+                "It can feel as though every app is trying to guess what you want before your brain has time to 
+                come up with its own answer, like an obnoxious party guest who finishes your sentences as you speak them..." 
+              </p>
+              <a href="https://www.newyorker.com/culture/infinite-scroll/the-age-of-algorithmic-anxiety" target="_blank" rel="noopener noreferrer"><button class="card-cta">Read More</button></a>
+            </div>
+            <div class="card">
+              <div class="card-accent accent-yellow"></div>
+              <div class="card-icon" aria-hidden="true">The Third Space</div>
+              <p class="card-body">
+                "First Space is the space we live in, our comfortable surroundings. The Second Space is the space that, 
+                outside of our home, we spend most of our time, usually the place of work. Then there’s Third Space."
+              </p>
+              <a href="https://medium.com/@caine_chan/rediscovering-connection-the-importance-of-third-spaces-in-a-digital-world-75f5167c358f" target="_blank" rel="noopener noreferrer"><button class="card-cta">Read More</button></a>
+            </div>
+          </div>
+
+          <!-- External readings (expandable like shift-content) -->
+          <div style="margin-top: 1.5rem;">
+            <button
+              id="expand-readings-btn"
+              style="
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                width: 100%;
+                padding: 1.25rem 1.5rem;
+                background: rgba(255, 230, 199, 0.5);
+                border: 2px solid var(--hover-accent);
+                border-radius: 12px;
+                font-weight: 600;
+                font-size: 1.05rem;
+                cursor: pointer;
+                transition: all 0.2s ease;
+                color: var(--warm-ink);
+              "
+            >
+              <span>External readings about leisure in the digital age:</span>
+              <span
+                id="expand-readings-icon"
+                style="font-size: 1.3rem; transition: transform 0.3s ease;"
+              >▼</span>
+            </button>
+            <div
+              id="readings-content"
+              style="
+                display: none;
+                margin-top: 1rem;
+                padding: 1.5rem;
+                background: rgba(255, 230, 199, 0.3);
+                border-radius: 12px;
+                border-left: 4px solid var(--hover-accent);
+                animation: slideDown 0.3s ease;
+              "
+            >
+              <ul style="font-size: 0.95rem; line-height: 1.7; padding-left: 1.2rem;">
+                <a href="https://files.eric.ed.gov/fulltext/EJ1409784.pdf" target="_blank" rel="noopener noreferrer"> <li><em>Digital Leisure: Transformation of Leisure Activities</em> by Ömer Faruk Tutar</li></a>
+                <a href="https://washingtonbeerblog.com/the-digitalization-of-leisure-and-its-social-implications/" target="_blank" rel="noopener noreferrer"><li><em>The Digitalization of Leisure and Its Social Implications</em></li></a>
+                <a href="https://medium.com/unhcr-innovation-service/entertainment-for-well-being-why-the-future-of-digital-in-humanitarianism-will-be-shaped-by-e53402e202d7" target="_blank" rel="noopener noreferrer"><li><em>Entertainment for well-being: Why leisure will shape the future of digital in humanitarianism</em></li></a>
+                <a href="https://www.sciencedirect.com/science/article/pii/S147383762500036X" target="_blank" rel="noopener noreferrer"><li>
+                  <em>Digital leisure use and psychological well-being among recreation management students:
+                  The mediating role of social media engagement</em> by Kubra Asan
+                </li></a>
+                <a href="https://www.researchgate.net/publication/274698150_Digital_leisure_study_The_consumption_experience_habits_and_social_uses" target="_blank" rel="noopener noreferrer"><li>
+                  <em>Digital leisure study: The consumption experience, habits and social uses</em> by Laura Rojas de Francisco
+                </li></a>
+                <a href="https://www.nortisjournal.com/index.php/pub/article/view/3/8" target="_blank" rel="noopener noreferrer"><li><em>Digital Recreation and Artificial Leisure: A Philosophical Inquiry</em> by Rojhat Aydin</li></a>
+              </ul>
+            </div>
+          </div>
+
             </div>
           </div>
         </div>
@@ -440,6 +478,7 @@ class App {
     // Overview-specific behavior
     if (this.state.activeTab === 'about') {
       this.attachExpandButton();
+      this.attachReadingsExpandButton();
       this.attachDoorToggle();
     }
 
@@ -472,6 +511,23 @@ class App {
       expandBtn.addEventListener('click', () => {
         const isExpanded = shiftContent.style.display === 'block';
         shiftContent.style.display = isExpanded ? 'none' : 'block';
+        expandIcon.style.transform = isExpanded ? 'rotate(0deg)' : 'rotate(180deg)';
+        expandBtn.style.background = isExpanded
+          ? 'rgba(255, 230, 199, 0.5)'
+          : 'rgba(255, 230, 199, 0.8)';
+      });
+    }
+  }
+
+  private attachReadingsExpandButton(): void {
+    const expandBtn = document.getElementById('expand-readings-btn');
+    const readingsContent = document.getElementById('readings-content');
+    const expandIcon = document.getElementById('expand-readings-icon');
+
+    if (expandBtn && readingsContent && expandIcon) {
+      expandBtn.addEventListener('click', () => {
+        const isExpanded = readingsContent.style.display === 'block';
+        readingsContent.style.display = isExpanded ? 'none' : 'block';
         expandIcon.style.transform = isExpanded ? 'rotate(0deg)' : 'rotate(180deg)';
         expandBtn.style.background = isExpanded
           ? 'rgba(255, 230, 199, 0.5)'
