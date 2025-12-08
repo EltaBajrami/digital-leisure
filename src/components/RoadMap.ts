@@ -20,7 +20,7 @@ export class RoadMap {
         </div>
 
         <p class="roadmap-intro">
-          Follow this map through familiar Vassar spaces. Each stop is a prompt to notice how digital systems already
+          Follow this map through familiar Vassar spaces. <br> Each stop is a prompt to notice how digital systems already
           shape your leisure.
         </p>
 

@@ -18,7 +18,7 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
   line-height: 1.6;
   color: var(--warm-ink);
-  background: #ffeede;  /* slightly deeper warm background to match peach accents */
+  background: #ffeede;  /*  deeper warm background to match peach accents */
   min-height: 100vh;
   position: relative;
 }
