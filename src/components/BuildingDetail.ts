@@ -1,6 +1,7 @@
 interface BuildingInfo {
   step: string;
   title: string;
+  titleImage: string;
   blurb: string;
   tryThis: string;
   connectedTo: string[];
@@ -15,6 +16,7 @@ export class BuildingDetail {
       {
         step: '1',
         title: 'Main',
+        titleImage: '/main-word.png',
         blurb:
           'Main looks analog, but nearly every routine here runs on digital platforms. Even when nothing feels digital, digital systems are everywhere. From scanning your ID to swiping in Retreat, your data is being collected all around you.',
         tryThis:
@@ -33,8 +35,9 @@ export class BuildingDetail {
       {
         step: '2',
         title: 'Library',
+        titleImage: '/library-word.png',
         blurb:
-          'The library is built for focus, but it’s also one of the few places on campus where slow, uninterrupted leisure still makes sense. Reading here doesn’t have to be productive or efficient, it can just be quiet time with a book. In a digital environment shaped by recommendations, notifications, and algorithmic nudges, the library offers a rare space for unstructured attention.',
+          "The library is built for focus, but it's also one of the few places on campus where slow, uninterrupted leisure still makes sense. Reading here doesn't have to be productive or efficient, it can just be quiet time with a book. In a digital environment shaped by recommendations, notifications, and algorithmic nudges, the library offers a rare space for unstructured attention.",
         tryThis:
           'Pick a book just because it looks interesting and read one chapter for fun.',
         connectedTo: [
@@ -51,8 +54,9 @@ export class BuildingDetail {
       {
         step: '3',
         title: 'Olmsted',
+        titleImage: '/olmsted-word.png',
         blurb:
-          'As a classroom building and where we have this class, consider how Olmsted is where a lot of your digital thinking happens. It’s where we learn about platforms, data, and power, often while actively using those same systems. Classes like ours depend on platforms like Moodle and Google Docs, while also educating on how they operate and the dangers that come with being too dependent on these digital systems. ',
+          "As a classroom building and where we have this class, consider how Olmsted is where a lot of your digital thinking happens. It's where we learn about platforms, data, and power, often while actively using those same systems. Classes like ours depend on platforms like Moodle and Google Docs, while also educating on how they operate and the dangers that come with being too dependent on these digital systems. ",
         tryThis:
           'After class, walk outside before opening your laptop or phone. Let the class end without immediately switching to a version of digital leisure. Notice how long the urge to check something lasts before giving in.',
         connectedTo: [
@@ -69,6 +73,7 @@ export class BuildingDetail {
       {
         step: '4',
         title: 'The Deece',
+        titleImage: '/deece-word.png',
         blurb:
           'The dining hall is a social space which provides a natural break in the day for meals. Digital devices often interrupt this form of leisure, replacing conversation with scrolling and texting.',
         tryThis:
@@ -87,8 +92,9 @@ export class BuildingDetail {
       {
         step: '5',
         title: 'Sunset Lake',
+        titleImage: '/sunsetlake-word.png',
         blurb:
-          'Sunset Lake is one of the rare places on campus where time doesn’t automatically feel scheduled or optimized. It’s a space that supports wandering, sitting, walking, and being outside without a clear goal.',
+          "Sunset Lake is one of the rare places on campus where time doesn't automatically feel scheduled or optimized. It's a space that supports wandering, sitting, walking, and being outside without a clear goal.",
         tryThis:
           'Walk one full lap around the lake at a normal pace. Try to feel present and enjoy nature and the walk.',
         connectedTo: [
@@ -105,6 +111,7 @@ export class BuildingDetail {
       {
         step: '6',
         title: 'AFC',
+        titleImage: '/afc-word.png',
         blurb:
           'The AFC is filled with numbers (reps, steps, minutes, goals). Digital fitness culture turns movement into data: something to measure, record, or improve! In this environment, exercise can shift from an embodied experience to a productivity task. ',
         tryThis:
@@ -123,8 +130,9 @@ export class BuildingDetail {
       {
         step: '7',
         title: 'Vogelstein — Making Things Without Posting',
+        titleImage: '/vogelstein-word.png',
         blurb:
-          'Vogelstein is a space for performance, art, and creativity, but it’s also connected to visibility and sharing. A lot of creative work today is shaped by whether it will be documented, liked, or posted.',
+          "Vogelstein is a space for performance, art, and creativity, but it's also connected to visibility and sharing. A lot of creative work today is shaped by whether it will be documented, liked, or posted.",
         tryThis:
           'Do something creative for 10–15 minutes! Draw, write, play music, sketch ideas, or experiment with something  and don’t take a photo or post it anywhere. Let the work exist only in the moment, without an audience!',
         connectedTo: [
@@ -174,7 +182,13 @@ export class BuildingDetail {
       <div class="building-detail-page">
         <button class="back-button" id="back-to-roadmap">← Back to map</button>
         <div class="building-detail-content">
-          <h2 class="building-detail-title">${building.title}</h2>
+          <div style="text-align: center; margin-bottom: 1.5rem;">
+            <img
+              src="${building.titleImage}"
+              alt="${building.title}"
+              style="max-width: 500px; width: 100%; height: auto; display: block; margin: 0 auto;"
+            />
+          </div>
 
           <div class="building-detail-image-container">
             <img
