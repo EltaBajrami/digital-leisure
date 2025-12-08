@@ -14,108 +14,108 @@ export class BuildingDetail {
       '1',
       {
         step: '1',
-        title: 'Main — Platforms & Daily Routines',
+        title: 'Main',
         blurb:
-          'Main is where a lot of your daily systems pass through at once: mail, dining access, admin errands, schedules, and campus tech. Even when nothing feels especially digital, your time here is shaped by portals, IDs, notifications, and deadlines moving in the background.',
+          'Main looks analog, but nearly every routine here runs on digital platforms. Even when nothing feels digital, digital systems are everywhere. From scanning your ID to swiping in Retreat, your data is being collected all around you.',
         tryThis:
-          'Sit somewhere in Main for 10 minutes without opening Moodle, Gmail, or your phone. Just sit, wait, or people-watch.',
+          'Sit in Main for 10 minutes without opening any devices. Observe boredom, conversations, and how often you want to check something.',
         connectedTo: [
           'Langdon Winner – “Do Artifacts Have Politics?”',
           'Janet Abbate – Inventing the Internet (infrastructure)',
           'Graham Pickren – “The Global Assemblage of Digital Flow”',
         ],
         image: '/src/main.png',
-        video: 'https://www.youtube.com/embed/VIDEO_ID_MAIN', // TODO: replace
+        video: 'https://www.youtube.com/embed/b-r6q7ie_yA', // TODO: replace
       },
     ],
     [
       '2',
       {
         step: '2',
-        title: 'Library — Reading for Pleasure',
+        title: 'Library',
         blurb:
-          'The library is built for focus, but it’s also one of the few places on campus where slow, uninterrupted leisure still makes sense. Reading here doesn’t have to be productive or efficient — it can just be quiet time with a book.',
+          'The library is built for focus, but it’s also one of the few places on campus where slow, uninterrupted leisure still makes sense. Reading here doesn’t have to be productive or efficient, it can just be quiet time with a book. In a digital environment shaped by recommendations, notifications, and algorithmic nudges, the library offers a rare space for unstructured attention.',
         tryThis:
-          'Pick a book just because it looks interesting and read one chapter for fun — not for class, not for notes.',
+          'Pick a book just because it looks interesting and read one chapter for fun.',
         connectedTo: [
           'Safiya Noble – Algorithms of Oppression',
           'Tarleton Gillespie – “The Relevance of Algorithms”',
           'Nissenbaum – “How Computer Systems Embody Values”',
         ],
         image: '/src/library.png',
-        video: 'https://www.youtube.com/embed/VIDEO_ID_LIBRARY', // TODO: replace
+        video: 'https://www.youtube.com/embed/juVXUPTCa00', // TODO: replace
       },
     ],
     [
       '3',
       {
         step: '3',
-        title: 'Olmsted — Thinking Beyond the Screen',
+        title: 'Olmsted',
         blurb:
-          'Olmsted is where most of your digital thinking happens — laptops open, slides projected, tabs multiplying. It’s where you learn about platforms, data, and power, often while actively using those same systems.',
+          'As a classroom building and where we have this class, consider how Olmsted is where a lot of your digital thinking happens. It’s where we learn about platforms, data, and power, often while actively using those same systems. Classes like ours depend on platforms like Moodle and Google Docs, while also educating on how they operate and the dangers that come with being too dependent on these digital systems. ',
         tryThis:
-          'After class, walk outside before opening your laptop or phone. Let the class end without immediately switching tabs.',
+          'After class, walk outside before opening your laptop or phone. Let the class end without immediately switching to a version of digital leisure. Notice how long the urge to check something lasts before giving in.',
         connectedTo: [
           'Sadowski – “When Data is Capital”',
           'Couldry & Mejias – “Data Colonialism”',
           'Bender et al. – “On the Dangers of Stochastic Parrots”',
         ],
         image: '/src/olmsted.png',
-        video: 'https://www.youtube.com/embed/VIDEO_ID_OLMSTED', // TODO: replace
+        video: 'https://www.youtube.com/embed/ArI6albrkuY', // TODO: replace
       },
     ],
     [
       '4',
       {
         step: '4',
-        title: 'Deece — Eating Without Distraction',
+        title: 'The Deece',
         blurb:
-          'The Deece feels like downtime, but it runs on tight schedules, labor systems, and swipe-based efficiency. It’s one of the clearest places where convenience and speed quietly shape how you experience rest.',
+          'The dining hall is a social space which provides a natural break in the day for meals. Digital devices often interrupt this form of leisure, replacing conversation with scrolling and texting.',
         tryThis:
-          'Eat one full meal without scrolling, watching, or listening to anything. Just eat and talk — or eat quietly.',
+          'Eat one meal without your phone on the table. Just enjoy the food and whoever you’re with (or the quiet if you’re alone). Observe what changes. How was this a different experience if you’re used to using your phone while you eat?',
         connectedTo: [
           'Lilly Irani – “The Cultural Work of Microwork”',
           'Muldoon et al. – “A Typology of AI Data Work”',
           'Srnicek – Platform Capitalism (Chapter 2)',
         ],
         image: '/src/deece.png',
-        video: 'https://www.youtube.com/embed/VIDEO_ID_DEECE', // TODO: replace
+        video: 'https://www.youtube.com/embed/nsSEsAZhl8Q', // TODO: replace
       },
     ],
     [
       '5',
       {
         step: '5',
-        title: 'Sunset Lake — Unstructured Time & Being Outdoors',
+        title: 'Sunset Lake',
         blurb:
           'Sunset Lake is one of the rare places on campus where time doesn’t automatically feel scheduled or optimized. It’s a space that supports wandering, sitting, walking, and being outside without a clear goal.',
         tryThis:
-          'Walk one full lap around the lake at a normal pace. Don’t time it and don’t listen to anything — just walk.',
+          'Walk one full lap around the lake at a normal pace. Try to feel present and enjoy nature and the walk.',
         connectedTo: [
           'Anna Tsing – “On Nonscalability”',
           'Ray Oldenburg – Third Places',
           'Tsing’s nonscalable life vs optimized platforms',
         ],
         image: '/src/sunsetlake.png',
-        video: 'https://www.youtube.com/embed/VIDEO_ID_LAKE', // TODO: replace
+        video: 'https://www.youtube.com/embed/1PP7Sv-2yFs', // TODO: replace
       },
     ],
     [
       '6',
       {
         step: '6',
-        title: 'AFC — Movement Without Metrics',
+        title: 'AFC',
         blurb:
-          'The AFC is full of numbers — reps, steps, timers, streaks. Movement here often becomes something to measure or “complete,” rather than something you just do for how it feels.',
+          'The AFC is filled with numbers (reps, steps, minutes, goals). Digital fitness culture turns movement into data: something to measure, record, or improve! In this environment, exercise can shift from an embodied experience to a productivity task. ',
         tryThis:
-          'Go to the gym and move for 10–15 minutes without tracking anything — no timer, no streak, no app.',
+          'Move for 10 - 15 minutes without tracking anything. Just stretch, walk, lift, or move however you want. Notice how your attention shifts when you’re not counting.',
         connectedTo: [
           'Sadowski – “When Data is Capital”',
           'Couldry & Mejias – Data Colonialism and extraction',
           'Srnicek – Platform logics applied to the body',
         ],
         image: '/src/afc.png',
-        video: 'https://www.youtube.com/embed/VIDEO_ID_AFC', // TODO: replace
+        video: 'https://www.youtube.com/embed/5wfnF5y1aeA', // TODO: replace
       },
     ],
     [
@@ -126,14 +126,14 @@ export class BuildingDetail {
         blurb:
           'Vogelstein is a space for performance, art, and creativity, but it’s also connected to visibility and sharing. A lot of creative work today is shaped by whether it will be documented, liked, or posted.',
         tryThis:
-          'Do something creative for 10–15 minutes — draw, write, play music, sketch ideas, or experiment with something — and don’t take a photo or post it anywhere.',
+          'Do something creative for 10–15 minutes! Draw, write, play music, sketch ideas, or experiment with something  and don’t take a photo or post it anywhere. Let the work exist only in the moment, without an audience!',
         connectedTo: [
           'Sasha Costanza-Chock – Design Justice (Introduction)',
           'Safiya Noble – search, race, and visibility',
           'Gillespie – Platforms and the politics of visibility',
         ],
         image: '/src/vogelstein.png',
-        video: 'https://www.youtube.com/embed/VIDEO_ID_VOGEL', // TODO: replace
+        video: 'https://www.youtube.com/embed/uA70ZGCC1f4', // TODO: replace
       },
     ],
   ]);

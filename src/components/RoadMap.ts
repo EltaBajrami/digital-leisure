@@ -20,7 +20,7 @@ export class RoadMap {
 
         <p style="max-width: 650px; margin: 0.75rem auto 1.5rem; font-size: 0.98rem; line-height: 1.6;">
           Follow this map through familiar Vassar spaces. Each stop is a prompt to notice how digital systems already
-          shape your “down time” here – and to try one small, slower activity in the same place.
+          shape your leisure!
         </p>
 
         <div class="roadmap-timeline">
@@ -31,14 +31,10 @@ export class RoadMap {
                 <div class="roadmap-title-image">
                   <img
                     src="/src/main-word.png"
-                    alt="Main — Platforms & Daily Routines"
+                    alt="Main"
                     class="roadmap-title-word"
                   />
                 </div>
-                <p style="font-size: 0.95rem; line-height: 1.6;">
-                  A hub for mail, dining access, and admin tasks where portals, IDs, and schedules quietly set the pace
-                  of your day long before you think about “leisure.”
-                </p>
               </div>
               <div class="roadmap-building">
                 <img
@@ -48,7 +44,7 @@ export class RoadMap {
                   data-step="1"
                 />
                 <p class="roadmap-description">
-                  Click Main to explore how platforms script your routines.
+                  Click Main to explore how digital systems are integrated into aspects of our everyday lives.
                 </p>
               </div>
             </div>
@@ -65,9 +61,6 @@ export class RoadMap {
                     class="roadmap-title-word"
                   />
                 </div>
-                <p style="font-size: 0.95rem; line-height: 1.6;">
-                  A space built for focus that also makes room for slow, non-productive reading and quiet time away from feeds.
-                </p>
               </div>
               <div class="roadmap-building">
                 <img
@@ -94,9 +87,7 @@ export class RoadMap {
                     class="roadmap-title-word"
                   />
                 </div>
-                <p style="font-size: 0.95rem; line-height: 1.6;">
-                  Home of laptops, slides, and class discussions about digital systems that you step back into as soon as class ends.
-                </p>
+          
               </div>
               <div class="roadmap-building">
                 <img
@@ -106,7 +97,7 @@ export class RoadMap {
                   data-step="3"
                 />
                 <p class="roadmap-description">
-                  Click Olmsted to connect class ideas to daily habits.
+                  Click Olmsted to connect leisure and education.
                 </p>
               </div>
             </div>
@@ -123,9 +114,6 @@ export class RoadMap {
                     class="roadmap-title-word"
                   />
                 </div>
-                <p style="font-size: 0.95rem; line-height: 1.6;">
-                  Meals feel easy and social here, but that ease is supported by tightly scheduled, often less visible work.
-                </p>
               </div>
               <div class="roadmap-building">
                 <img
@@ -135,7 +123,7 @@ export class RoadMap {
                   data-step="4"
                 />
                 <p class="roadmap-description">
-                  Click the Deece to look at comfort and invisible labor.
+                  Click the Deece to look at how digital systems often interupt natural forms of leisure.
                 </p>
               </div>
             </div>
@@ -152,9 +140,7 @@ export class RoadMap {
                     class="roadmap-title-word"
                   />
                 </div>
-                <p style="font-size: 0.95rem; line-height: 1.6;">
-                  A place where time can slow down — walking, sitting, or talking without needing to track or document it.
-                </p>
+            
               </div>
               <div class="roadmap-building">
                 <img
@@ -164,7 +150,7 @@ export class RoadMap {
                   data-step="5"
                 />
                 <p class="roadmap-description">
-                  Click the lake to think about offline breaks.
+                  Click the lake to think about nature and offline breaks.
                 </p>
               </div>
             </div>
@@ -181,9 +167,7 @@ export class RoadMap {
                     class="roadmap-title-word"
                   />
                 </div>
-                <p style="font-size: 0.95rem; line-height: 1.6;">
-                  A building full of counters, streaks, and goals where exercise can turn into another thing to optimize.
-                </p>
+          
               </div>
               <div class="roadmap-building">
                 <img
@@ -193,11 +177,11 @@ export class RoadMap {
                   data-step="6"
                 />
                 <p class="roadmap-description">
-                  Click the AFC to explore moving without tracking.
+                  Click the AFC to explore movement. 
                 </p>
               </div>
             </div>
-          </section>
+          </section>s
 
           <!-- Step 7: Vogelstein -->
           <section class="roadmap-step">
@@ -210,9 +194,7 @@ export class RoadMap {
                     class="roadmap-title-word"
                   />
                 </div>
-                <p style="font-size: 0.95rem; line-height: 1.6;">
-                  A space for rehearsals, shows, and art-making that sits close to questions of performance, documentation, and sharing.
-                </p>
+             
               </div>
               <div class="roadmap-building">
                 <img
@@ -222,7 +204,7 @@ export class RoadMap {
                   data-step="7"
                 />
                 <p class="roadmap-description">
-                  Click Vogelstein to think about making without posting.
+                  Click Vogelstein to think about digital-age creativity .
                 </p>
               </div>
             </div>

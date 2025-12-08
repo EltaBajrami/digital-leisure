@@ -95,8 +95,7 @@ class App {
             <span style="display:block;">Whose time, data, or labor is being organized in the background?</span>
           </p>
           <p style="font-size: 1.05rem; line-height: 1.8; margin-bottom: 1rem;">
-            The goal isn’t to give up digital leisure, but to see how it’s structured and to imagine slower, more
-            self-directed ways of taking a break.
+            The goal isn’t to give up digital leisure, but to imagine different ways of taking a break.
           </p>
 
           <p
@@ -114,7 +113,9 @@ class App {
             <ul style="font-size: 0.98rem; line-height: 1.7; padding-left: 1.2rem; margin-bottom: 0.5rem;">
               <li><strong>CAMPUS ROADMAP:</strong> Click each building to learn more about relevant ideas!</li>
               <li><strong>CONCEPTS & KEYWORDS:</strong> Study keywords to build your digital literacy.</li>
-            </ul>
+              <li><strong>POSTERS:</strong> Explore a project by our peers!</li>
+
+              </ul>
           </div>
 
           <!-- Expandable Section (your new text) -->
@@ -137,7 +138,7 @@ class App {
                 color: var(--warm-ink);
               "
             >
-              <span>How “taking a break” has changed:</span>
+              <span>How “taking a break” has changed : </span>
               <span
                 id="expand-icon"
                 style="font-size: 1.3rem; transition: transform 0.3s ease;"
@@ -157,8 +158,7 @@ class App {
             >
               <p style="line-height: 1.7; margin-bottom: 0.75rem;">
                 Before digital platforms, leisure often meant active, self-chosen participation: reading, crafts, games,
-                hanging out in common rooms or cafés. There were pauses and pockets of boredom. Time felt slower, and
-                “fun” didn’t always come with notifications.
+                hanging out in common rooms or cafés.
               </p>
               <p style="line-height: 1.7; margin-bottom: 0.75rem;">
                 Today, much of our rest is filtered through platforms, recommendation systems, and metrics. Breaks turn
@@ -251,7 +251,7 @@ class App {
                   <span class="badge-icon">&nbsp;</span>
                   <div class="badge-text">
                     <strong>DATA AS POWER</strong><br>
-                    clicks, pauses, and emotions become extractable data and influence
+                    online activity becomes extractable data and influence
                   </div>
                 </div>
               </div>
@@ -273,7 +273,7 @@ class App {
                   <span class="badge-icon">&nbsp;</span>
                   <div class="badge-text">
                     <strong>NO NEUTRAL AI</strong><br>
-                    systems amplify existing social logics rather than objective truth
+                    systems amplify existing social biases rather than objective truth
                   </div>
                 </div>
               </div>
@@ -284,7 +284,7 @@ class App {
                   <span class="badge-icon">&nbsp;</span>
                   <div class="badge-text">
                     <strong>SLOWING DOWN</strong><br>
-                    intentional slowness becomes a small act of resistance
+                    reintroducing mindful practices back into leisure
                   </div>
                 </div>
               </div>
@@ -364,6 +364,19 @@ class App {
             style="max-width: 650px; width: 100%; height: auto; display: block;"
           />
         </div>
+
+          <h2
+    style="
+      margin-bottom: 2rem;
+      font-weight: 500;
+      font-size: 1.05rem;
+      opacity: 0.85;
+      letter-spacing: 0.02em;
+    "
+  >
+    Thanks to our peers for making these posters:
+  </h2>
+
 
         <div class="slideshow-container">
           <div class="slide active">
