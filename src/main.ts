@@ -423,7 +423,7 @@ Bundled, Buried & Behind Closed Doors </a> documentary
           />
         </div>
 
-          <h2
+          <p
     style="
       margin-bottom: 2rem;
       font-weight: 500;
@@ -432,8 +432,8 @@ Bundled, Buried & Behind Closed Doors </a> documentary
       letter-spacing: 0.02em;
     "
   >
-    Thanks to our peers for making these posters:
-  </h2>
+    Want to see more work from our peers in STS-236 Digital Lives? Check out these posters made by Sophia and JD!:
+  </p>
 
 
         <div class="slideshow-container">
