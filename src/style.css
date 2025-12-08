@@ -484,6 +484,47 @@ h4 {
 .roadmap-item {
   flex: 1 1 50%;
 }
+/* Fun handwritten sneak peek under each title */
+.roadmap-tldr {
+  position: relative;
+  display: inline-block;
+  margin-top: 0.45rem;
+  padding: 0.25rem 0.6rem;
+  font-size: 0.95rem;
+  letter-spacing: 0.04em;
+  color: var(--warm-ink);
+  background: rgba(255, 230, 199, 0.55);   /* light peach smear */
+  border-radius: 6px;
+  transform: rotate(-1.2deg);
+  box-shadow: 
+    0 2px 0 rgba(154, 81, 37, 0.35),
+    0 6px 12px rgba(154, 81, 37, 0.18);
+  max-width: 28rem;
+  line-height: 1.5;
+}
+
+/* sketchy underline */
+.roadmap-tldr::after {
+  content: "";
+  position: absolute;
+  left: 0.4rem;
+  right: 0.4rem;
+  bottom: -0.25rem;
+  height: 3px;
+  background: var(--hover-accent);
+  opacity: 0.65;
+  border-radius: 4px;
+  transform: rotate(-1deg);
+}
+
+/* tiny playful movement on hover */
+.roadmap-item:hover .roadmap-tldr {
+  transform: rotate(1deg) translateY(-2px);
+  box-shadow: 
+    0 3px 0 rgba(154, 81, 37, 0.45),
+    0 10px 18px rgba(154, 81, 37, 0.25);
+}
+
 
 .roadmap-building {
   flex: 1 1 50%;

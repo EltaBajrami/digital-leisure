@@ -302,7 +302,7 @@ Bundled, Buried & Behind Closed Doors </a> documentary
               <div class="card-accent accent-yellow"></div>
               <div class="card-icon" aria-hidden="true">The Third Space</div>
               <p class="card-body">
-                "These small steps help me reconnect with the world around me, fostering vital social connections that technology can never replace"
+                "These small steps help me reconnect with the world around me, fostering vital social connections that technology can never replace."
               </p>
               <a href="https://medium.com/@caine_chan/rediscovering-connection-the-importance-of-third-spaces-in-a-digital-world-75f5167c358f" target="_blank" rel="noopener noreferrer"><button class="card-cta">Read More</button></a>
             </div>
