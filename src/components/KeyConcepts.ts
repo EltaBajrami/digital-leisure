@@ -159,6 +159,89 @@ export class KeyConcepts {
           </span>
         </div>
 
+        <!-- Additional Terms -->
+        <h3 class="concepts-section-title">Additional Terms</h3>
+        <div class="concepts-bubbles">
+          <span
+            class="concept-bubble concept-has-definition"
+            data-term="Sociotechnical"
+            data-definition="The intersection of social and technical systems."
+          >
+            Sociotechnical
+          </span>
+
+          <span
+            class="concept-bubble concept-has-definition"
+            data-term="Technological determinism"
+            data-definition="Technology drives social change and culture. 
+"
+          >
+            Technological determinism
+          </span>
+
+          <span
+            class="concept-bubble concept-has-definition"
+            data-term="Mechanization"
+            data-definition="A transition towards the use of machinery rather than human or animal labor."
+          >
+            Mechanization
+          </span>
+
+           <span
+            class="concept-bubble concept-has-definition"
+            data-term="Packet switching
+"
+            data-definition="A process which breaks up information into smaller data packets and then reassembles them at their destination.
+"
+          >
+            Packet switching
+
+          </span>
+
+          <span
+            class="concept-bubble concept-has-definition"
+            data-term="Path dependency"
+            data-definition="A process which breaks up information into smaller data packets and then reassembles them at their destination."
+          >
+            Path dependency
+          </span>
+
+          <span
+            class="concept-bubble concept-has-definition"
+            data-term="Leapfrogging"
+            data-definition="When technological infrastructure is given to developing regions, allowing them to bypass older internet infrastructure and go straight to more modern, often wireless, options."
+          >
+            Leapfrogging
+          </span>
+
+          <span
+            class="concept-bubble concept-has-definition"
+            data-term="Data labeling"
+            data-definition="The process of tagging data to teach machine learning algorithms."
+          >
+            Data labeling
+          </span>
+
+           <span
+            class="concept-bubble concept-has-definition"
+            data-term="Algorithmic Management
+"
+            data-definition="When managerial functions are automated, either partially or fully, through algorithms."
+          >
+            Algorithmic Management
+          </span>
+
+           <span
+            class="concept-bubble concept-has-definition"
+            data-term="Machine learning
+
+"
+            data-definition="Computer systems which are able to “learn” without specific instruction by using algorithms to analyze patterns in data. "
+          >
+            Machine learning
+          </span>
+        </div>
+
         <!-- Custom student terms -->
         <section id="custom-concepts-section" style="display:none; margin-top: 2.5rem;">
           <h3 class="concepts-section-title">Your Terms</h3>
