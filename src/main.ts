@@ -71,12 +71,18 @@ class App {
 
           <p
             style="
+              position: relative;
+              display: inline-block;
               margin-top: 0.2rem;
               margin-bottom: 1.25rem;
+              padding: 0.35rem 0.8rem;
               font-size: 0.95rem;
               letter-spacing: 0.04em;
               text-transform: uppercase;
-              opacity: 0.8;
+              color: var(--warm-ink);
+              background: rgba(255, 230, 199, 0.55);
+              border-radius: 6px;
+              box-shadow: 0 2px 0 rgba(154, 81, 37, 0.35), 0 6px 12px rgba(154, 81, 37, 0.18);
             "
           >
             <strong> STS-236 </strong> <em> digital lives </em> : a final project by Alexandra, Ella, & Elta
@@ -484,6 +490,23 @@ Bundled, Buried & Behind Closed Doors </a> documentary
             <span class="dot-2" data-slide="3"></span>
             <span class="dot-2" data-slide="4"></span>
           </div>
+        </div>
+
+        <div style="margin-top: 2.5rem; text-align: center;">
+          <p style="font-size: 1.05rem; line-height: 1.8; margin-bottom: 1rem;">
+            To learn more about their project <a href="https://buttercup-banana-4b0.notion.site/Fight-the-Monopolies-2be7ea3d3bfc80c6a573d849412c6c2f" target="_blank" rel="noopener noreferrer"><button style="
+              background: var(--hover-accent);
+              color: var(--hover-accent-text);
+              border: none;
+              padding: 0.5rem 1.2rem;
+              border-radius: 25px;
+              font-size: 1rem;
+              font-weight: 500;
+              cursor: pointer;
+              transition: transform 0.2s ease, box-shadow 0.2s ease;
+              box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+            " onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 4px 12px rgba(0,0,0,0.25)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(0,0,0,0.15)'">click here</button></a>
+          </p>
         </div>
       </main>
 
